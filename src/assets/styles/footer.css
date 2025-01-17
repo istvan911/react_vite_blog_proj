@@ -1,0 +1,53 @@
+.footer-container {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: sticky;
+    box-shadow: 0px -5px 15px -8px rgba(255, 255, 255, 1);
+    margin-top: 70px;
+    
+  }
+  
+  .footer-ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .footer-li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-li a:hover {
+    color: #818180; /* Változtatja az ikon színét, ha az egér fölé megy */
+  }
+  
+  .footer-li a .fa {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  
+  .footer-contact {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .copyright-text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .copyright-text .fa {
+    margin-right: 5px;
+  }

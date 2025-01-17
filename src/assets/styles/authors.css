@@ -1,0 +1,12 @@
+.authors-container {   
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .authors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }

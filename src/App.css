@@ -1,0 +1,837 @@
+
+/*---------->   BASIC SETTINGS BEGIN  <----------*/
+:root{
+    --primary-color:#ddd;
+    --margin-1:70px 0;
+    --width-1: 50%;
+    --width-3: 90%;
+    --height-1:75vh
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    background-color: #222;
+    font-family: 'Roboto Mono','Courier New', Courier, monospace;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+h1,h2,h3,p{
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.input-form{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.label-form{
+  display: block;
+  margin-bottom: 5px;
+  color:  var(--primary-color);
+  font-weight: bold;
+}
+
+.button-form{
+  width: 100%;
+  padding: 15px;
+  background-color: #444;
+  color: var(--primary-color);
+  border: none;
+  border-radius: 19px;
+  cursor: pointer;
+  border: .3px solid var(--primary-color);
+}
+.button-form:hover{
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.container-50-bordered{
+  max-width: 50%;
+        margin: 0 auto;
+        padding: 35px 15px;
+        border: 1px solid var(--primary-color);
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
+        border-radius: 17px;
+        background-color: #222;
+        align-items: center;
+        align-content: center;
+}
+
+/*---------->   BASIC SETTINGS END <----------*/
+
+
+/*---------->   COMPONENTS BEGIN <----------*/
+
+    /*---------->   AUTHORCARD  BEGIN <----------*/
+
+    .author-card {
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        padding: 16px;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+        margin: 30px 0;
+        transition: transform 0.2s;
+      }
+    .author-card:hover{
+      transform: scale(1.1);
+      cursor:pointer;
+    }
+      
+      .authorcard-image {
+        width: 100px;
+        height: 100px;
+        border: 1.5px solid var(--primary-color);
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 12px;
+      }
+      
+      .author-name {
+        font-size: 1.5em;
+        margin: 0.5em 0;
+      }
+      
+      .author-bio {
+        font-size: 1rem;
+        margin: 0.5em 0;
+        text-align: center;
+      }
+      
+      .author-join-date {
+        font-size: 0.9em;
+        text-align: right;
+        margin-bottom:5px;
+      }
+
+    /*---------->   AUTHORCARD  END <----------*/
+
+    /*---------->   CARD  BEGIN <----------*/
+
+    .card {
+        min-width: 20rem;
+        max-width: 25rem;
+        max-height: 38rem;
+        margin: 70px 1.5rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
+        transition: transform 0.2s;
+      }
+      
+      .card:hover {
+        transform: scale(1.1);
+        cursor:pointer;
+      }
+      
+      .card-image {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      
+      .card-content {
+        padding: 1.5em;
+        text-align: center;
+      }
+      
+      .card-title {
+        font-size: 1.5em;
+        margin: 0 0 10px 0;
+      }
+      
+      .card-text {
+        font-size: 1em;
+        margin: 0 0 10px 0;
+        flex-grow: 1;
+        text-align:center;
+      }
+      
+      .card-date {
+        font-size: 0.9em;
+        text-align: right;
+        margin: 0 0 10px 0; 
+      }
+
+      /*.btn-card-show-more{
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        cursor: pointer;
+        background-color: #444;
+        font-weight: bold;
+      }
+      .btn-card-show-more:hover{
+        background-color: var(--primary-color);
+        color: #000;
+      }*/
+
+    /*---------->   CARD  END <----------*/
+
+    /*---------->   CAROUSEL  BEGIN <----------*/
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-height: 600px; /* Adjust as per your needs */
+        margin: auto;
+        overflow: hidden;margin-bottom: 18px;
+      }
+      
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        max-width: 100%;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+        display: none;
+        overflow: hidden;
+      }
+      
+      .carousel-item.active {
+        display: flex; /* Flexbox elrendezés a képek középre igazításához */
+        opacity: 1;
+      }
+      
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        
+      }
+      
+      .prev {
+        left: 0;
+      }
+      
+      .next {
+        right: 0;
+      }
+      
+      .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
+      .carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* A kép a rendelkezésre álló területet kitölti */
+        max-height: 600px; /* Biztosítja, hogy ne lépje túl a Carousel magasságát */
+      }      
+
+    /*---------->   CAROUSEL  END <----------*/
+
+    /*---------->   HEADER  BEGIN <----------*/
+
+    /* Basic styling */
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        color: var(--primary-color);
+        box-shadow: 0 5px 15px -8px rgba(255, 255, 255, 0.9);
+        margin-bottom: 70px;
+    }
+    
+    .nav-logo h3 {
+        color: var(--primary-color);
+
+    }
+    
+    /* Nav menu for larger screens */
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+    }
+    
+    .nav-menu li a {
+      color: var(--primary-color);
+      padding: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative; /* Szükséges a ::after pszeudoelemhez */
+      transition: color 0.3s ease-in-out; /* A szöveg színének átmenete */
+      transition-delay: 0.3s; /* Késleltetés a szín váltására */
+    }
+    
+    .nav-menu li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px; /* A csík vastagsága */
+      background-color: #FFD700; /* Aranysárga szín */
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease-in-out; /* Animáció a csík szélességére */
+    }
+    
+    .nav-menu li a:hover::after {
+      width: 100%; /* A csík végighúzódik a link alatt */
+    }
+    
+    .nav-menu li a:hover {
+      color: #FFD700; /* A szöveg színe változik */
+      transition-delay: 0s; /* A színváltás késleltetése visszaáll, amikor hover történik */
+    }
+    
+    
+    /* Mobile menu (initially hidden) */
+    .nav-toggle-button {
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none; /* hidden by default on large screens */
+    }
+    .nav-toggle-button:hover{
+      color: #FFD700;
+    }
+    
+    /* Mobile menu styling */
+    .nav-menu.open {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        flex-direction: column;
+        box-shadow: 0 5px 15px -8px rgba(255, 255, 255, 0.9);
+    }
+    
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .nav-menu {
+        display: none; /* hide on small screens */
+        flex-direction: column;
+        width: 100%;
+        z-index: 10;
+        }
+    
+        .nav-toggle-button {
+        display: block; /* show toggle button on small screens */
+        }
+    }
+
+    /*---------->   HEADER  END <----------*/
+
+    /*---------->   FOOTER  BEGIN <----------*/
+
+    .footer-container {
+        background-color: #222;
+        padding: 20px;
+        text-align: center;
+        color: var(--primary-color);
+        position: sticky;
+        box-shadow: 0px -5px 15px -8px rgba(255, 255, 255, 1);
+        margin-top: 70px;
+        
+      }
+      
+      .footer-ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-li {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      
+      .footer-li a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .footer-li a:hover {
+        color: #FFD700;
+      }
+      
+      .footer-li a .fa {
+        margin-right: 10px;
+        font-size: 24px;
+      }
+      
+      .footer-contact {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+      .copyright-text {
+        font-size: 14px;
+        margin-top: 20px;
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .copyright-text .fa {
+        margin-right: 5px;
+      }
+
+    /*---------->   FOOTER  END <----------*/
+
+/*---------->   COMPONENTS END <----------*/
+
+/*---------->   PAGES  BEGIN <----------*/
+    /*---------->   AUTHORPOST  BEGIN <----------*/
+
+      
+    
+    /*---------->   AUTHORPOST  END <----------*/
+
+    /*---------->   CATEGORYPOSTS  BEGIN <----------*/
+
+
+
+    /*---------->   CATEGORYPOSTS  END <----------*/
+
+    /*---------->   CREATEPOST  BEGIN <----------*/
+
+
+    
+    /*---------->   CREATEPOST  END <----------*/
+
+    /*---------->   DASHBOARD  BEGIN <----------*/
+
+    
+
+    /*---------->   DASHBOARD  END <----------*/
+
+    /*---------->   DELETEPOST  BEGIN <----------*/
+
+
+
+    /*---------->   DELETEPOST  END <----------*/
+
+    /*---------->   EDITPOST  BEGIN <----------*/
+
+
+
+    /*---------->   EDITPOST  END <----------*/
+
+    /*---------->   ERRORPAGE  BEGIN <----------*/
+
+    /* Konténer stílus */
+    .error-container {
+        display: flex;
+        max-width: 50%;
+        max-height: 50vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        margin: 90px auto;
+        box-shadow: 5px 5px 15px rgba(255, 0, 0, 1);
+        border: 1px solid red;
+        border-radius: 15px;
+    }
+    
+    /* Cím stílus */
+    .error-title {
+        font-size: 2rem;
+        color: rgba(190, 0, 0, .9);
+    }
+    
+    /* Hibaleírás stílus */
+    .error-text {
+        font-size: 1.2rem;
+    }
+    
+    /* Dátum stílus */
+    .error-date {
+        font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        
+        .error-container {
+            max-width: 90%;
+            
+        }
+    }
+
+    /*---------->   ERRORPAGE  END <----------*/
+
+    /*---------->   HOME  BEGIN / AUTHORS BEGIN <----------*/
+
+    .card-container{
+        background-color: #222;
+        margin: var(--margin-1);
+        margin: 0  30px;
+    }
+      
+      .card-container h1 {
+        margin-top: 20px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+        text-align: center;
+        font-weight: bold;
+        background-color: #222;
+      }
+      
+      .card-container p{
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.5;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #222;  }
+      
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #222;
+        margin-bottom: 20px;
+      }
+
+    /*---------->   HOME  END / AUTHORS END <----------*/
+
+    /*---------->   LOGIN  BEGIN / LOGOUT BEGIN / REGISTER BEGIN<----------*/
+
+    .login-container {
+        max-width: 50%;
+        margin: 90px auto;
+        padding: 20px;
+        border: 1px solid var(--primary-color);
+        box-shadow: 5px 5px 15px rgba(255, 255, 255, .7); /* Fehér árnyék */
+        border-radius: 17px;
+        background-color: #222;
+        align-items: center;
+        align-content: center;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+    
+    .login {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        background-color: #444;
+        color: var(--primary-color);
+        border: none;
+        border-radius: 19px;
+        cursor: pointer;
+    }
+    
+    .login:hover {
+        background-color: var(--primary-color);
+        color: black;
+    }
+    
+    
+    @media (max-width: 768px) {
+        
+        .login-container {
+            max-width: 90%;
+            
+        }
+      }
+
+    /*---------->   LOGIN  END / LOGOUT END / REGISTER END <----------*/
+
+    /*---------->   LOGOUT  BEGIN <----------*/
+
+    .logout-container {
+        margin: 1rem;
+        margin: 25vh auto;
+        padding: 30px;
+        max-width: 40%;
+        border: var(--primary-color) 1px solid;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #222;
+      }
+      
+      button.hidden {
+        display: none;
+      }
+      
+      .modal {
+        display:flexbox;
+        align-items:center;
+        justify-content: center;
+      }
+      
+      .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .logout{
+        margin: 30px;
+        padding: 10px 20px;
+        background-color: #222;
+        border: var(--primary-color) 1px solid;
+      }
+      .button-logout{
+        width: 45%;
+        padding: 10px;
+        border: 1px solid var(--primary-color);
+        border-radius: 10px;
+        margin: 0 10px;
+        color: var(--primary-color);
+        background-color: #333;
+      }
+
+      .button-logout:hover{
+        background-color: var(--primary-color);
+        color: #000;
+      }
+      
+      @media (max-width: 768px) {
+        
+        .logout-container {
+            max-width: 90%;
+            
+        }
+      }
+    /*---------->   LOGOUT  END <----------*/
+
+    /*---------->   POSTDETAIL  BEGIN <----------*/
+
+    .post-detail-container {
+      max-width: 80%;
+      margin: 0 auto;
+      padding-bottom: 35px;
+      border: 1px solid var(--primary-color);
+      border-radius: 17px;
+      background-color: #222;
+      align-items: center;
+      align-content: center;
+      overflow: hidden;
+  }
+  .post-content{
+    padding: 0 15px;
+  }
+  
+  .post-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover; /* A kép kitölti a rendelkezésre álló helyet, miközben megőrzi az arányokat */
+  }
+  
+  .post-title {
+      font-size: 2rem;
+      margin: 20px 0; /* A kép alatt helyezzük el */
+      text-align: center; /* Középre igazított cím */
+  }
+  
+  .post-description {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+  
+  .post-footer {
+      display: flex;
+      flex-direction: column; /* Elemei minden esetben oszlopban helyezkednek el */
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .post-date {
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-bottom: 10px; /* Hozzáadunk némi távolságot az elemek között */
+  }
+  
+  .author-info {
+      display: flex;
+      align-items: center;
+      flex-direction: column; /* Az author-info elemei is oszlopba rendeződnek */
+  }
+  
+  .author-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 10px; /* Margin a kép és a név között */
+  }
+  
+  .author-name {
+      font-size: 1rem;
+      font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+      .post-detail-container {
+          max-width: 90%;
+      }
+      .post-image {
+          height: 200px; /* Még kisebb magasság kis kijelzőn */
+      }
+  
+      .post-title {
+          font-size: 1.2rem; /* Kisebb betűméret a címhez */
+          margin: 10px 0;
+      }
+  
+      .post-description {
+          font-size: 1rem; /* Kisebb betűméret a leíráshoz */
+          margin-bottom: 20px;
+      }
+  
+      /* A kis kijelzőkre vonatkozó lábléc beállítások már megfelelőek az oszlop elrendezéshez, ezért nem kell külön módosítani */
+  }
+  
+  
+      
+    
+      
+    /*---------->   POSTDETAIL  END <----------*/
+
+    /*---------->   REGISTER  BEGIN <----------*/
+
+    .register-container {
+        max-width: 50%;
+        margin: 0 auto;
+        padding: 35px 15px;
+        border: 1px solid #ddd;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
+        border-radius: 17px;
+        background-color: #222;
+        align-items: center;
+        align-content: center;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .register {
+        width: 100%;
+        padding: 15px;
+        background-color: #444;
+        color: var(--primary-color);
+        border: none;
+        border-radius: 19px;
+        cursor: pointer;
+        border: .3px solid var(--primary-color);
+
+    }
+    
+    .register:hover {
+        background-color: var(--primary-color);
+        color: black;
+    }
+    
+    
+    @media (max-width: 768px) {
+        
+        .register-container {
+            max-width: 90%;
+            
+        }
+      }
+
+    /*---------->   REGISTER  END <----------*/
+
+    /*---------->   USERPROFILE  BEGIN <----------*/
+
+    .user-profile {
+      display: flex;
+      font-size: 1.3rem;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    
+    .profile-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    
+    .profile-name {
+      font-size: 3rem;
+      font-family: 'Roboto Mono';
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .profile-join-date {
+      font-size: 1.rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .no-posts {
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--primary-color);
+    }
+    
+
+    /*---------->   USERPROFILE  END <----------*/
+
+/*---------->   PAGES  END <----------*/
