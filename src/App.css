@@ -569,6 +569,17 @@ h1,h2,h3,p{
         background-color: var(--primary-color);
         color: black;
     }
+    .login_p{
+      padding-top: 20px;
+      margin-bottom: 0;
+      cursor: pointer;
+      color:#f4e696; 
+    }
+    .login_p:hover{
+      padding-top: 20px;
+      cursor: pointer;
+      color:#FFD700;
+    }
     
     
     @media (max-width: 768px) {

@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ErrorPage from './ErrorPage';  // Importáljuk az ErrorPage komponenst
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [token, setToken] = useState(null);
+
+     const navigate = useNavigate(); // Initialize the hook for navigation
+    
+      const handleClick = () => {
+        // Navigate to the /profile/:id page on click
+        navigate(`/register`);
+      };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,7 +48,7 @@ export default function Login() {
                     <input className='input-form'
                         type="text" 
                         id="username" 
-                        placeholder='Írd be a felhasználóneved...'
+                        placeholder='Felhasználónév'
                         value={username} 
                         onChange={(e) => setUsername(e.target.value)} 
                         required 
@@ -51,13 +59,14 @@ export default function Login() {
                     <input className='input-form' 
                         type="password" 
                         id="password" 
-                        placeholder='Írd be a jelszavad...'
+                        placeholder='Jelszó'
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                         required 
                     />
                 </div>
                 <button className='button-form' type="submit">Bejelentkezés</button>
+                <p onClick={handleClick} className='login_p'>Nincs még felhasználói fiókja? Hozzon létre egyet most!</p>
             </form>
 
             {token && <p className="success-message">Sikeres bejelentkezés! Token: {token}</p>}

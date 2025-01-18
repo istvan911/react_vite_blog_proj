@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
     const [email, setEmail] = useState('');
@@ -8,6 +9,13 @@ export default function Register() {
     const [fullName, setFullName] = useState('');
     const [dateOfBirth, setDateOfBirth] = useState('');
     const [phone, setPhone] = useState('');
+
+    const navigate = useNavigate(); // Initialize the hook for navigation
+        
+          const handleClick = () => {
+            // Navigate to the /profile/:id page on click
+            navigate(`/login`);
+          };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -94,6 +102,8 @@ export default function Register() {
                     />
                 </div>
                 <button className = 'button-form'type="submit">Regisztráció</button>
+
+                <p onClick={handleClick} className='login_p'>Van már felhasználói fiókja? <span>Jelentkezzen be!</span></p>
             </form>
         </div>
     );

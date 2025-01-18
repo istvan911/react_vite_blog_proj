@@ -33,13 +33,13 @@ export default function Header() {
       <nav>
         <div className="container nav-container">
           <Link className="nav-logo" to={'/'}>
-            <h3>Logo</h3>
+            <h3>Főoldal</h3>
           </Link>
 
           {/* Menu for larger screens */}
           <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
             <li><Link to={'/myposts/1'}>Profilom</Link></li>
-            <li><Link to={'/create'}>Poszt létrehozása</Link></li>
+            {/*<li><Link to={'/create'}>Poszt létrehozása</Link></li>*/}
             <li><Link to={'/authors'}>Szerzők</Link></li>
             <li><Link to={'/logout'}>Kijelentkezés</Link></li>
           </ul>
