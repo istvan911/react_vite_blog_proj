@@ -2,7 +2,7 @@ const posts =
 [
     {
         id: 1,
-        title: "Card 1",
+        title: '<h1 style="color:rgb(197, 226, 255); font-size: 24px; text-align: center; font-weight: bold; margin-top: 20px;">A mesterséges intelligencia hatása a modern társadalomra és gazdaságra</h1>',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",

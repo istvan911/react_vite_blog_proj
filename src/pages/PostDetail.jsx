@@ -23,10 +23,14 @@ export default function PostDetail() {
         <img src={post.image} alt={post.title} className="post-image" />
       <div className="post-content">
         {/* Poszt címe */}
-        <h1 className="post-title">{post.title}</h1>
-        
+        {/*<h1 className="post-title">{post.title}</h1>*/}
+        {/*post.title*/}
+        <h1 
+        className="post-title" 
+        dangerouslySetInnerHTML={{ __html: post.title }}
+        ></h1>
         {/* Poszt leírása */}
-        <p className="post-description">{post.content}</p>
+        {<p className="post-description">{post.content}</p>}
         
         {/* Dátum és szerző a poszt alján */}
         <div className="post-footer">

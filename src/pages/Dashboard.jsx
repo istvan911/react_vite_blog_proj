@@ -32,7 +32,7 @@ const UserProfile = () => {
       </div>
 
       <div className="profile-posts">
-        <h2 className="posts-title">{author.name} posztjai</h2>
+        <h2 className="posts-title">{author.username} posztjai</h2>
         {authorPosts.length > 0 ? (
           <div className="card-list">
             {authorPosts.map((post) => (
