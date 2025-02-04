@@ -2,7 +2,8 @@ const posts =
 [
     {
         id: 1,
-        title: '<h1 style="color:rgb(197, 226, 255); font-size: 24px; text-align: center; font-weight: bold; margin-top: 20px;">A mesterséges intelligencia hatása a modern társadalomra és gazdaságra</h1>',
+        title: 'A mesterséges intelligencia hatása a modern társadalomra és gazdaságra',
+        path: '/posts/post1.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",
@@ -11,7 +12,8 @@ const posts =
     },
     {
         id: 2,
-        title: "Card 2",
+        title: "Bolygónk felmelegedése",
+        path: '/posts/post2.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
         createdAt: "2023-09-10",
         userId: "2",
@@ -20,7 +22,8 @@ const posts =
     },
     {
         id: 3,
-        title: "Card 3",
+        title: "Ősi civilizációk",
+        path: '/posts/post3.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "3",
@@ -30,6 +33,7 @@ const posts =
       {
         id: 4,
         title: "Card 4",
+        path: '/posts/post4.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "4",
@@ -39,6 +43,7 @@ const posts =
       {
         id: 5,
         title: "Card 5",
+        path: '/posts/post5.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "5",
@@ -48,6 +53,7 @@ const posts =
       {
         id: 6,
         title: "Card 6",
+        path: '/posts/post6.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",
@@ -57,6 +63,7 @@ const posts =
       {
         id: 7,
         title: "Card 7",
+        path: '/posts/post7.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "2",
@@ -66,6 +73,7 @@ const posts =
       {
         id: 8,
         title: "Card 8",
+        path: '/posts/post8.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "3",
@@ -75,6 +83,7 @@ const posts =
       {
         id: 9,
         title: "Card 9",
+        path: '/posts/post9.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "4",
@@ -84,6 +93,7 @@ const posts =
       {
         id: 10,
         title: "Card 10",
+        path: '/posts/post10.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "5",
@@ -93,6 +103,7 @@ const posts =
       {
         id: 11,
         title: "Card 11",
+        path: '/posts/post11.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",
@@ -102,6 +113,7 @@ const posts =
       {
         id: 12,
         title: "Card 12",
+        path: '/posts/post12.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "2",
@@ -111,6 +123,7 @@ const posts =
       {
         id: 13,
         title: "Card 13",
+        path: '/posts/post13.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "3",
@@ -120,6 +133,7 @@ const posts =
       {
         id: 14,
         title: "Card 14",
+        path: '/posts/post14.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "4",
@@ -129,6 +143,7 @@ const posts =
       {
         id: 15,
         title: "Card 15",
+        path: '/posts/post15.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "5",
@@ -138,6 +153,7 @@ const posts =
       {
         id: 16,
         title: "Card 16",
+        path: '/posts/post16.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",
@@ -147,6 +163,7 @@ const posts =
       {
         id: 17,
         title: "Card 17",
+        path: '/posts/post17.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "2",
@@ -156,6 +173,7 @@ const posts =
       {
         id: 18,
         title: "Card 18",
+        path: '/posts/post18.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "3",
@@ -165,6 +183,7 @@ const posts =
       {
         id: 19,
         title: "Card 19",
+        path: '/posts/post19.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",
@@ -174,6 +193,7 @@ const posts =
       {
         id: 20,
         title: "Card 20",
+        path: '/posts/post20.html',
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus dicta esse obcaecati eaque. Magni commodi atque eligendi et incidunt qui id expedita molestiae dignissimos, tenetur cupiditate. Tenetur laboriosam inventore enim voluptatibus excepturi, eveniet soluta, modi vero vel similique ut rem. Natus tenetur optio dolor similique veniam perferendis molestiae inventore. Obcaecati excepturi a veritatis ea totam voluptates mollitia porro impedit doloremque laborum, explicabo fugit sint illum cupiditate qui doloribus culpa consequatur tempora accusantium aperiam sit repellat! Sequi sed nobis eius quibusdam quidem quasi incidunt similique architecto quos? Doloribus, deleniti est veniam distinctio veritatis minima dolor. Voluptate quia nihil doloribus quos?",
         createdAt: "2023-09-10",
         userId: "1",

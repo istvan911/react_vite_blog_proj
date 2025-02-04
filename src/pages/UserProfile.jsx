@@ -38,10 +38,6 @@ const UserProfile = () => {
               <Card
                 key={post.id}
                 id={post.id}
-                image={post.image}
-                title={post.title}
-                description={post.content}
-                date={new Date(post.createdAt).toLocaleDateString()}
               />
             ))}
           </div>

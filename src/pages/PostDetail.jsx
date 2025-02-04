@@ -1,51 +1,31 @@
-import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import data from '../data';
-import ErrorPage from './ErrorPage'; // Importáljuk az ErrorPage komponenst
+import ErrorPage from './ErrorPage';
 
 export default function PostDetail() {
-  const { id } = useParams(); // URL-ből kapott id
-  const navigate = useNavigate();
-  const post = data.posts.find((post) => post.id === parseInt(id)); // Poszt keresése id alapján
-  // Ha a post nem található, akkor az ErrorPage-et jelenítjük meg
+  const { id } = useParams();
+  const post = data.posts.find((post) => post.id === parseInt(id));
+  const [postContent, setPostContent] = useState('');
+
+  useEffect(() => {
+    if (post) {
+      fetch(post.path)
+        .then((response) => response.text())
+        .then((html) => {
+          setPostContent(html);
+        })
+        .catch((error) => console.error('Hiba történt a fájl betöltésekor:', error));
+    }
+  }, [post]);
+
   if (!post) {
     return <ErrorPage errorMessage={`Post ID: ${id} nem található.`} />;
   }
-  const author = data.authors.find((author) => author.id === parseInt(post.userId)); // Author keresés id alapján
 
-  
-
-
-  console.log(post.image)
   return (
     <div className="post-detail-container">
-        {/* Poszt képe */}
-        <img src={post.image} alt={post.title} className="post-image" />
-      <div className="post-content">
-        {/* Poszt címe */}
-        {/*<h1 className="post-title">{post.title}</h1>*/}
-        {/*post.title*/}
-        <h1 
-        className="post-title" 
-        dangerouslySetInnerHTML={{ __html: post.title }}
-        ></h1>
-        {/* Poszt leírása */}
-        {<p className="post-description">{post.content}</p>}
-        
-        {/* Dátum és szerző a poszt alján */}
-        <div className="post-footer">
-          {/* Dátum */}
-          <p className="post-date">{new Date(post.createdAt).toLocaleDateString()}</p>
-          
-          {/* Szerző adatai */}
-          <div className="author-info">
-            <img src={author.profilePicture} alt={author.username} className="author-image" />
-            <div className="author-details">
-              <p className="author-name">{author.username}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: postContent }} />
     </div>
   );
 }
