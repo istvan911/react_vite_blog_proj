@@ -6,23 +6,20 @@ import { AiOutlineClose } from "react-icons/ai";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Function to toggle the menu
+  //Menü megnyitása
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // useEffect to close the menu if screen width is greater than 800px
+  //800 pixel alatt a menü automatikus bezárása
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 800) {
-        setMenuOpen(false); // Automatically close the menu
+        setMenuOpen(false); 
       }
     };
 
-    // Add resize event listener
     window.addEventListener('resize', handleResize);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };

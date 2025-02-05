@@ -1,41 +1,57 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import ErrorPage from './ErrorPage';  // Importáljuk az ErrorPage komponenst
 import { useNavigate } from 'react-router-dom';
+import ErrorPage from './ErrorPage';
+import data from '../data'; // Feltételezzük, hogy a data.jsx tartalmazza a felhasználói adatokat
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [token, setToken] = useState(null);
-
-     const navigate = useNavigate(); // Initialize the hook for navigation
-    
-      const handleClick = () => {
-        // Navigate to the /profile/:id page on click
-        navigate(`/register`);
-      };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const navigate = useNavigate();
         
-        try {
-            const response = await axios.post('http://localhost:8080/api/users/login', {
-                username: username,
-                password: password
-            });
+    const handleClick = () => {
+        navigate(`/register`);
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-            setToken(response.data); // JWT tokent mentjük a state-be
-            setErrorMessage(''); // Töröljük az esetleges hibaüzenetet
-            console.log('Sikeres bejelentkezés:', response.data); // Token konzolra kiírva (pl. JWT)
-        } catch (error) {
-            console.error('Bejelentkezési hiba:', error.response.data);
-            setErrorMessage('Hiba a bejelentkezés során. Kérjük, ellenőrizze a felhasználónevet és a jelszót.');
+        const users = data.users || [];
+
+        // Ellenőrzés Local Storage-ból
+        const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Egyesítjük a két forrást
+        const allUsers = [...users, ...storedUsers];
+
+        // Megkeressük a felhasználót
+        const user = allUsers.find(u => u.username === username);
+
+        if (!user) {
+            setErrorMessage('Felhasználó nem található!');
+            return;
         }
+
+        // Jelszó Base64 ellenőrzése
+        const encodedPassword = btoa(password);
+        if (user.password !== encodedPassword) {
+            setErrorMessage('Hibás jelszó!');
+            return;
+        }
+
+        // Sikeres bejelentkezés -> Token mentése 
+        const fakeToken = btoa(`${username}:${encodedPassword}`);
+        localStorage.setItem('authToken', fakeToken);
+        setToken(fakeToken);
+        setErrorMessage('');
+        console.log('Sikeres bejelentkezés!', fakeToken);
+
+        // Navigálás a főoldalra vagy dashboardra
+        navigate('/');
     };
 
     if (errorMessage) {
-        // Ha hiba van, az ErrorPage komponenst használjuk
+        //Hiba esetén a hiba okának megjelenítése
         return <ErrorPage errorMessage={errorMessage} />;
     }
 
@@ -68,8 +84,6 @@ export default function Login() {
                 <button className='button-form' type="submit">Bejelentkezés</button>
                 <p onClick={handleClick} className='login_p'>Nincs még felhasználói fiókja? Hozzon létre egyet most!</p>
             </form>
-
-            {token && <p className="success-message">Sikeres bejelentkezés! Token: {token}</p>}
         </div>
     );
 }

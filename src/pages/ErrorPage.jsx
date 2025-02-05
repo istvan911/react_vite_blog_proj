@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// ErrorPage Component
 const ErrorPage = ({ errorMessage }) => {
-
+    //Dátum formázási beállításai
     const options = {
       year: 'numeric',
       month: '2-digit',
@@ -12,10 +11,11 @@ const ErrorPage = ({ errorMessage }) => {
       second: '2-digit',
       timeZoneName: 'short',
     };
-
+      //Dátum lekérdezése
       const currentDate = new Date();
+      //Dátum formázása
       const formatted = new Intl.DateTimeFormat('hu-HU', options).format(currentDate);
-
+  //információk megjelenítése
   return (
     <div className="error-container">
       <h1 className="error-title">Hoppá! Valami hiba történt...</h1>

@@ -5,16 +5,17 @@ import Card from '../components/Card';
 import ErrorPage from './ErrorPage'
 
 const UserProfile = () => {
-  const { id } = useParams(); // Extract the user id from the URL
-  const authorId = parseInt(id); // Convert the id to a number to match the data
+  const { id } = useParams(); //id kinyerése url-ből
+  const authorId = parseInt(id); //id konvertálása igész számmá
   const { authors, posts } = data;
 
-  // Find the specific author by their id
+  //Szerző adatainak kigyűjtése id alapján
   const author = authors.find((author) => author.id === authorId);
 
-  // Filter posts that belong to this specific author
+  //Szerző posztjainak kigyűjtése
   const authorPosts = posts.filter((post) => post.userId === id);
-
+  
+  //Ha nincs szerző ilyen id-vel, hiba dobás
   if (!author) {
     return <ErrorPage errorMessage={`A szerző nem található! (ID:${authorId})`} />;
   }

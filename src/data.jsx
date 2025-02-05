@@ -224,6 +224,58 @@ const authors = [
     "bio": "Teszt Felhasználó a rendszerek teszteléséhez használt példa, aki mindig készen áll a tesztek futtatására."
   }
 ];
+const users = [
+  {
+    "id": 1,
+    "username": "johndoe",
+    "password": "cGFzc3dvcmQxMjM=",
+    "fullName": "John Doe",
+    "dateOfBirth": "1990-05-15",
+    "role": "USER",
+    "email": "johndoe@example.com",
+    "phone": "+36201234567",
+  },
+  {
+    "id": 2,
+    "username": "janedoe",
+    "password": "securePass1!",
+    "fullName": "Jane Doe",
+    "dateOfBirth": "1985-09-20",
+    "role": "ADMIN",
+    "email": "janedoe@example.com",
+    "phone": "+36701234567",
+  },
+  {
+    "id": 3,
+    "username": "peter123",
+    "password": "peter12345",
+    "fullName": "Péter Szabó",
+    "dateOfBirth": "1995-12-10",
+    "role": "USER",
+    "email": "peter.szabo@example.com",
+    "phone": "+36301234567",
+  },
+  {
+    "id": 4,
+    "username": "anna_nagy",
+    "password": "strongPass@123",
+    "fullName": "Anna Nagy",
+    "dateOfBirth": "2000-07-25",
+    "role": "ADMIN",
+    "email": "anna.nagy@example.com",
+    "phone": "+36401234567",
+  },
+  {
+    "id": 5,
+    "username": "test_user",
+    "password": "testUserPass",
+    "fullName": "Teszt Felhasználó",
+    "dateOfBirth": "1980-01-01",
+    "role": "USER",
+    "email": "test.user@example.com",
+    "phone": "+36501234567",
+  }
+];
 
 const categories = [
   {
@@ -525,4 +577,4 @@ const postTags = [
 
 
 
-export default {posts, authors, categories, tags, postTags};
+export default {posts, authors, categories, tags, postTags,users};

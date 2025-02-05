@@ -9,11 +9,11 @@ export default function Card({ id }) {
   const post = data.posts.find((post) => post.id === parseInt(id));
   const [postContent, setPostContent] = useState('');
   const [postTitle, setPostTitle] = useState('');
-
+  //Szöveg elvágása bizonyos indexnél
   const truncateText = (text, n) => {
     return typeof text === 'string' ? (text.length > n ? text.substring(0, n) + '...' : text) : '';
   };
-
+  //Function a posztra való navigáláshoz
   const handleCardClick = () => {
     navigate(`/posts/${id}`);
   };
@@ -27,7 +27,7 @@ export default function Card({ id }) {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
 
-          // Title kiszedése
+          // Title kinyerése
           const extractedTitle = doc.querySelector('title')?.innerText || 'Nincs cím';
           setPostTitle(extractedTitle);
 
@@ -40,6 +40,7 @@ export default function Card({ id }) {
   }, [post]);
 
   if (!post) {
+    //Hiba esetén, visszajelzés adása
     return <ErrorPage errorMessage={`Post ID: ${id} nem található.`} />;
   }
 

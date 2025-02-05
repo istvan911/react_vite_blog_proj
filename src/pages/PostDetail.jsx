@@ -7,7 +7,7 @@ export default function PostDetail() {
   const { id } = useParams();
   const post = data.posts.find((post) => post.id === parseInt(id));
   const [postContent, setPostContent] = useState('');
-
+  //html betöltése
   useEffect(() => {
     if (post) {
       fetch(post.path)
@@ -22,7 +22,7 @@ export default function PostDetail() {
   if (!post) {
     return <ErrorPage errorMessage={`Post ID: ${id} nem található.`} />;
   }
-
+  //html megjelenítése egy div-en belül
   return (
     <div className="post-detail-container">
       <div dangerouslySetInnerHTML={{ __html: postContent }} />
