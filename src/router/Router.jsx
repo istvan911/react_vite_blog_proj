@@ -18,6 +18,8 @@ import Logout from '../pages/Logout'
 import PostDetail from '../pages/PostDetail'
 import Register from '../pages/Register'
 import UserProfile from '../pages/UserProfile'
+import GDPR from '../pages/GDPR'
+import ASZF from '../pages/ASZF'
 
 export default function Router() {
   return (
@@ -39,6 +41,8 @@ export default function Router() {
             <Route path='/posts/:id' element={<PostDetail />}/>
             <Route path='/register' element={<Register />}/>
             <Route path='/profile/:id' element={<UserProfile />}/>
+            <Route path='/aszf' element={<ASZF />}/>
+            <Route path='/gdpr' element={<GDPR />}/>
             <Route path='/*' element={<ErrorPage />}/>
             </Routes>
         <Footer/>

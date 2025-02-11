@@ -408,6 +408,14 @@ h1,h2,h3,p{
         margin-right: 5px;
       }
 
+      .gdpr{
+        text-decoration: none;
+        color:  white;
+        margin-left: 15px;
+      }
+      .gdpr:hover{
+        color:  #FFD700;
+      }
     /*---------->   FOOTER  END <----------*/
 
     /*---------->   TEXTEDITOR  BEGIN <----------*/
@@ -419,6 +427,56 @@ h1,h2,h3,p{
         margin-top: 30px;
       }
     /*---------->   TEXTEDITOR  END <----------*/
+
+    /*---------->   ASZF  BEGIN <----------*/
+
+      .gdpr-container{
+        max-width: 80%;
+        margin: 90px auto;
+        padding: 20px;
+        border: 1px solid var(--primary-color);
+        box-shadow: 5px 5px 15px rgba(255, 255, 255, .7); /* Fehér árnyék */
+        border-radius: 17px;
+        background-color: #222;
+        align-items: center;
+        align-content: center;
+      }
+      .gdpr-title{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #fff;
+
+      }
+      .gdpr-subtitle{
+        color: #ddd;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .gdpr-p{
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ddd;
+
+      }
+      .gdpr-ul{
+        margin: 0 auto;
+        list-style:inside;
+      }
+      .gdpr-li{
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #ddd;
+        text-align: center;
+      }
+
+  /*---------->   ASZF  END <----------*/
+
+  /*---------->   GDPR  BEGIN <----------*/
+
+
+
+  /*---------->   GDPR  END <----------*/
 
 /*---------->   COMPONENTS END <----------*/
 

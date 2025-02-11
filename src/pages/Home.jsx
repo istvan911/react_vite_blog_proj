@@ -16,7 +16,7 @@ export default function Home() {
       </p>
       
       <div className="card-list">
-        {posts.map((post) => ( // Végigmegyünk a képtömbön és kártyákat generálunk
+        {posts.map((post) => ( // Végigmegyünk a posztok tömbjén és kártyákat generálunk
           <Card
             key={post.id} // Egyedi key minden kártyának
             id={post.id} // Az id prop szükséges lehet a kártyán belül is

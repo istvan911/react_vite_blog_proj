@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
@@ -39,7 +40,7 @@ export default function Footer() {
           </li>
         </ul>
         <div className="copyright-text">
-          © {currentYear} Nagy István. Minden jog fenntartva.
+          © {currentYear} Nagy István. Minden jog fenntartva. <Link className='gdpr' to={'/aszf'}>ÁSZF</Link> <Link className='gdpr' to={'/gdpr'}>Adatkezelési Tájékoztató</Link>
         </div>
       </div>
     </>

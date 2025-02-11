@@ -5,10 +5,14 @@ import { AiOutlineClose } from "react-icons/ai";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   //Menü megnyitása
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+  const toggleLogin = () => {
+    setLoggedIn(!loggedIn);
   };
 
   //800 pixel alatt a menü automatikus bezárása
@@ -36,9 +40,9 @@ export default function Header() {
           {/* Menu for larger screens */}
           <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
             <li><Link to={'/myposts/1'}>Profilom</Link></li>
-            {/*<li><Link to={'/create'}>Poszt létrehozása</Link></li>*/}
+            <li><Link to={'/create'}>Poszt létrehozása</Link></li>
             <li><Link to={'/authors'}>Szerzők</Link></li>
-            <li><Link to={'/logout'}>Kijelentkezés</Link></li>
+            <li>{loggedIn ? <Link to={'/logout'}>Kijelentkezés</Link> : <Link to={'/login'}>Bejelentkezés</Link>}</li>
           </ul>
 
           {/* Menu toggle button */}
