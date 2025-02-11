@@ -410,6 +410,16 @@ h1,h2,h3,p{
 
     /*---------->   FOOTER  END <----------*/
 
+    /*---------->   TEXTEDITOR  BEGIN <----------*/
+
+      .save-button{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 30px;
+      }
+    /*---------->   TEXTEDITOR  END <----------*/
+
 /*---------->   COMPONENTS END <----------*/
 
 /*---------->   PAGES  BEGIN <----------*/

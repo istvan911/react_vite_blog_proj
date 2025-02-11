@@ -1,10 +1,14 @@
 import React from 'react';
+import TextEditor from '../components/TextEditor'
 
 
 const CreatePost = () => {
 
     return (
-        <div className="createPost"> Create a Post</div>
+        <div className="post-detail-container">
+            <TextEditor />
+        </div>
+
     );
 };
 
