@@ -20,12 +20,14 @@ import Register from '../pages/Register'
 import UserProfile from '../pages/UserProfile'
 import GDPR from '../pages/GDPR'
 import ASZF from '../pages/ASZF'
+import Cookie from '../components/Cookie'
 
 export default function Router() {
   return (
     <>
     <BrowserRouter>
         <ScrollToTop/>
+        <Cookie />
         <Header/>
             <Routes>
             <Route path='/' element={<Home />}/>

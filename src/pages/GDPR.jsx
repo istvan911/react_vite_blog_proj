@@ -9,8 +9,11 @@ const GDPR = () => {
       <p className="gdpr-p">Jelen adatkezelési tájékoztató célja, hogy részletes információt nyújtson a weboldal felhasználói számára arról, hogyan kezeljük a személyes adatokat. Az adatkezelés során a hatályos jogszabályok, különösen az Európai Unió Általános Adatvédelmi Rendelete (GDPR) szerint járunk el.</p>
       
       <h2 className="gdpr-subtitle">2. Az adatkezelő adatai</h2>
-      <p className="gdpr-p">Adatkezelő: Weboldal Üzemeltető Kft.<br/>Székhely: 1234 Budapest, Minta utca 1.<br/>Elérhetőség: adatvedelem@weboldal.hu</p>
-      
+      <ul className="gdpr-ul">
+        <li className="gdpr-li">Adatkezelő: Weboldal Üzemeltető Kft.</li>
+        <li className="gdpr-li">Székhely: 1234 Budapest, Minta utca 1.</li>
+        <li className="gdpr-li">Elérhetőség: adatvedelem@weboldal.hu</li>
+      </ul>
       <h2 className="gdpr-subtitle">3. A kezelt adatok köre</h2>
       <p className="gdpr-p">Az alábbi személyes adatokat kezeljük a weboldal használata során:</p>
       <ul className="gdpr-ul">
