@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +40,7 @@ export default function Header() {
 
           {/* Menu for larger screens */}
           <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
+            <li><ThemeToggle></ThemeToggle></li>
             <li><Link to={'/myposts/1'}>Profilom</Link></li>
             <li><Link to={'/create'}>Poszt létrehozása</Link></li>
             <li><Link to={'/authors'}>Szerzők</Link></li>

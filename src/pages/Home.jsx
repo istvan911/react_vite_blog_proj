@@ -10,10 +10,11 @@ export default function Home() {
   return (
     <>
     <div className="card-container">
-      <h1>Legjobb blog bevezetés, csak még ki kellene találnom mi kerül ide!4!4!4!4!44!!</h1>
-      <p>
+      <h1 className='home-h1'>A világ legfrissebb érdekességei egyhelyen!</h1>
+      <p className='home-p'>
       Üdvözlünk a blogunkon! Jelenleg 5 tehetséges és elhivatott bloggerünk dolgozik azon, hogy izgalmas és hasznos tartalmakkal lásson el benneteket. Minden egyes bejegyzésünk célja, hogy inspiráljunk, szórakoztassunk, és értékes információkat nyújtsunk az olvasóinknak. Blogunk különböző témákban kínál írásokat: életmód, technológia, kultúra, utazás és még sok más. Folyamatosan bővítjük a tartalmainkat, hogy mindig friss és releváns információkkal szolgáljunk. Az íróink mindegyike saját területén tapasztalt, így a különböző nézőpontok és érdekes témák garantáltak. Ne hagyjátok ki a legújabb bejegyzéseinket, hiszen minden hónapban új írásokkal készülünk! Csatlakozz hozzánk, és fedezd fel a blogunk világát, amely mindig egy friss szemléletet és izgalmas ötleteket kínál!
       </p>
+      <h2>Legfrissebb posztjaink</h2>
       
       <div className="card-list">
         {posts.map((post) => ( // Végigmegyünk a posztok tömbjén és kártyákat generálunk

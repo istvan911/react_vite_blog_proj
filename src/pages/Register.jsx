@@ -26,9 +26,9 @@ export default function Register() {
     return (
         <div className="register-container">
             <h2>Regisztráció</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autoComplete="off">
                 <div className="form-group">
-                    <label className='label-form' htmlFor="user">Felhasználónév:</label>
+                    <label className='label-form' htmlFor="user" autoComplete="off">Felhasználónév:</label>
                     <input className='input-form'
                         id="username" 
                         value={userName} 
@@ -80,7 +80,7 @@ export default function Register() {
                     />
                 </div>
                 <div className="form-group">
-                    <label className='label-form' htmlFor="password">Jelszó:</label>
+                    <label className='label-form' htmlFor="password" autoComplete="new-password">Jelszó:</label>
                     <input className='input-form'
                         type="password" 
                         id="password" 

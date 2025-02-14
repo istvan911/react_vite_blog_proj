@@ -12,7 +12,7 @@ const Cookie = () => {
 
   const setCookieConsent = (value) => {
     const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 7);
+    expirationDate.setDate(expirationDate.getDate() + 1);
     localStorage.setItem(COOKIE_KEY, JSON.stringify({ value, expires: expirationDate }));
     setIsVisible(false);
   };

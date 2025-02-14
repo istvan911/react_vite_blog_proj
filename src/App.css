@@ -1,27 +1,57 @@
 
 /*---------->   BASIC SETTINGS BEGIN  <----------*/
 :root{
-    --primary-color:#ddd;
-    --margin-1:70px 0;
+  --primary-bg-color:#222 !important;
+  --secondary-bg-color: #444 !important;
+  --primary-color: #ddd !important;
+  --secondary-color: #ccc !important;
+  --third-color: #bbb !important;
+  --link-color: #FFD700 !important;
+  --link-bf-color:#f4e696 !important;
+  --link-btn:#fff !important;
+  --shadow-color:rgba(255, 255, 255, 1) !important;
+    /*--margin-1:70px 0;
     --width-1: 50%;
     --width-3: 90%;
-    --height-1:75vh
-
+    --height-1:75vh*/
 }
+[data-theme="dark"] {
+  --primary-bg-color:#222 !important;
+  --secondary-bg-color: #444 !important;
+  --primary-color: #fff !important;
+  --secondary-color: #ddd !important;
+  --third-color: #ccc !important;
+  --fourth-color: #bbb !important;
+  --link-color: #FFD700 !important;
+  --link-bf-color:#f4e696 !important;
+  --link-btn:#000 !important;
+  --shadow-color:rgba(255, 255, 255, 1) !important;
+}
+[data-theme="light"] {
+  --primary-bg-color:#fff !important;
+  --secondary-bg-color: #ccc !important;
+  --primary-color: #222 !important;
+  --secondary-color: #333 !important;
+  --third-color: #444 !important;
+  --fourth-color: #555 !important;
+  --link-color: #ff0015 !important;
+  --link-bf-color:#E63946 !important;
+  --link-btn:#fff !important;
+  --shadow-color:rgba(0, 0, 0, 1) !important;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--primary-bg-color);
     outline: none;
     border: none;
-    background-color: #222;
     font-family: 'Roboto Mono','Courier New', Courier, monospace;
     scroll-behavior: smooth;
-    line-height: 1.5;
 }
 h1,h2,h3,p{
     color: var(--primary-color);
-    text-align: center;
 }
 
 .input-form{
@@ -43,7 +73,7 @@ h1,h2,h3,p{
 .button-form{
   width: 100%;
   padding: 15px;
-  background-color: #444;
+  background-color: var(--secondary-bg-color);
   color: var(--primary-color);
   border: none;
   border-radius: 19px;
@@ -52,7 +82,7 @@ h1,h2,h3,p{
 }
 .button-form:hover{
   background-color: var(--primary-color);
-  color: black;
+  color: var(--link-btn);
 }
 
 .container-50-bordered{
@@ -60,9 +90,9 @@ h1,h2,h3,p{
         margin: 0 auto;
         padding: 35px 15px;
         border: 1px solid var(--primary-color);
-        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
+        box-shadow: 5px 5px 10px var(--shadow-color);
         border-radius: 17px;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         align-items: center;
         align-content: center;
 }
@@ -80,7 +110,6 @@ h1,h2,h3,p{
         padding: 16px;
         max-width: 300px;
         text-align: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
         margin: 30px 0;
         transition: transform 0.2s;
       }
@@ -99,20 +128,14 @@ h1,h2,h3,p{
       }
       
       .author-name {
-        font-size: 1.5em;
+        font-size: 1.5rem;
         margin: 0.5em 0;
       }
       
       .author-bio {
-        font-size: 1rem;
+        font-size: 1.1rem !important;
         margin: 0.5em 0;
-        text-align: center;
-      }
-      
-      .author-join-date {
-        font-size: 0.9em;
-        text-align: right;
-        margin-bottom:5px;
+        text-align: center !important;
       }
 
     /*---------->   AUTHORCARD  END <----------*/
@@ -125,9 +148,9 @@ h1,h2,h3,p{
         max-height: 38rem;
         margin: 70px 1.5rem;
         border: 1px solid var(--primary-color);
+        background-color: var(--primary-bg-color);
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
         transition: transform 0.2s;
       }
       
@@ -137,32 +160,34 @@ h1,h2,h3,p{
       }
       
       .card-image {
-        height: 200px;
+        height: 250px;
         width: 100%;
+        margin: 0;
         object-fit: cover;
         overflow: hidden;
       }
       
       .card-content {
-        padding: 1.5em;
+        padding: 1.1rem !important;
+        margin: 0;
         text-align: center;
       }
       
       .card-title {
-        font-size: 1.3  em;
-        margin: 0 0 10px 0;
+        font-size: 1.4rem !important;
+        margin: 0;
       }
       
       .card-text {
-        font-size: .7em;
-        margin: 0 0 10px 0;
+        font-size: 1rem !important;
+        margin: 0;
         flex-grow: 1;
-        text-align:center;
+        text-align:center !important;
       }
       
       .card-date {
-        font-size: .6em;
-        text-align: right;
+        font-size: .9rem !important;
+        text-align: center !important;
         margin: 0 0 10px 0; 
       }
 
@@ -172,7 +197,7 @@ h1,h2,h3,p{
         border: 1px solid var(--primary-color);
         color: var(--primary-color);
         cursor: pointer;
-        background-color: #444;
+        background-color: var(--secondary-bg-color);
         font-weight: bold;
       }
       .btn-card-show-more:hover{
@@ -189,7 +214,8 @@ h1,h2,h3,p{
         width: 100%;
         max-height: 600px; /* Adjust as per your needs */
         margin: auto;
-        overflow: hidden;margin-bottom: 18px;
+        overflow: hidden;
+        margin-bottom: 18px;
       }
       
       .carousel-inner {
@@ -250,6 +276,15 @@ h1,h2,h3,p{
 
     /*---------->   CAROUSEL  END <----------*/
 
+    /*---------->   THEMETOGGLE  BEGIN <----------*/
+
+    .theme-toggle-btn{
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+
+    /*---------->   THEMETOGGLE  END <----------*/
+
     /*---------->   HEADER  BEGIN <----------*/
 
     /* Basic styling */
@@ -259,7 +294,7 @@ h1,h2,h3,p{
         align-items: center;
         padding: 1rem;
         color: var(--primary-color);
-        box-shadow: 0 5px 15px -8px rgba(255, 255, 255, 0.9);
+        box-shadow: 0 5px 15px -8px var(--shadow-color);
         margin-bottom: 70px;
     }
     
@@ -290,7 +325,7 @@ h1,h2,h3,p{
       position: absolute;
       width: 0;
       height: 3px; /* A csík vastagsága */
-      background-color: #FFD700; /* Aranysárga szín */
+      background-color: var(--link-color); /* Aranysárga szín */
       bottom: 0;
       left: 0;
       transition: width 0.3s ease-in-out; /* Animáció a csík szélességére */
@@ -301,7 +336,7 @@ h1,h2,h3,p{
     }
     
     .nav-menu li a:hover {
-      color: #FFD700; /* A szöveg színe változik */
+      color: var(--link-color); /* A szöveg színe változik */
       transition-delay: 0s; /* A színváltás késleltetése visszaáll, amikor hover történik */
     }
     
@@ -316,7 +351,7 @@ h1,h2,h3,p{
         display: none; /* hidden by default on large screens */
     }
     .nav-toggle-button:hover{
-      color: #FFD700;
+      color: var(--link-color);
     }
     
     /* Mobile menu styling */
@@ -329,7 +364,7 @@ h1,h2,h3,p{
         text-align: center;
         padding: 1rem 0;
         flex-direction: column;
-        box-shadow: 0 5px 15px -8px rgba(255, 255, 255, 0.9);
+        box-shadow: 0 5px 15px -8px var(--shadow-color);
     }
     
     .nav-menu li {
@@ -355,12 +390,12 @@ h1,h2,h3,p{
     /*---------->   FOOTER  BEGIN <----------*/
 
     .footer-container {
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         padding: 20px;
         text-align: center;
         color: var(--primary-color);
         position: sticky;
-        box-shadow: 0px -5px 15px -8px rgba(255, 255, 255, 1);
+        box-shadow: 0px -5px 15px -8px var(--shadow-color);
         margin-top: 70px;
         
       }
@@ -382,7 +417,7 @@ h1,h2,h3,p{
       }
       
       .footer-li a:hover {
-        color: #FFD700;
+        color: var(--link-color);
       }
       
       .footer-li a .fa {
@@ -410,11 +445,24 @@ h1,h2,h3,p{
 
       .gdpr{
         text-decoration: none;
-        color:  white;
+        color: var(--secondary-color);
         margin-left: 15px;
       }
       .gdpr:hover{
-        color:  #FFD700;
+        color:  var(--link-color);
+      }
+
+      @media (max-width: 768px) {
+        .copyright-text {
+          flex-direction: column-reverse;
+          margin-top: 1rem;
+        }
+        .copyright-text .fa{
+          margin-bottom: 1.5rem;
+        }
+        .gdpr{
+          margin-bottom: .3rem;
+        }
       }
     /*---------->   FOOTER  END <----------*/
 
@@ -435,9 +483,9 @@ h1,h2,h3,p{
         margin: 90px auto;
         padding: 20px;
         border: 1px solid var(--primary-color);
-        box-shadow: 5px 5px 15px rgba(255, 255, 255, .7); /* Fehér árnyék */
+        box-shadow: 5px 5px 15px var(--shadow-color);
         border-radius: 17px;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         align-items: center;
         align-content: center;
       }
@@ -445,18 +493,18 @@ h1,h2,h3,p{
         margin-top: 30px;
         margin-bottom: 30px;
         text-align: center;
-        color: #fff;
+        color: var(--primary-color);
 
       }
       .gdpr-subtitle{
-        color: #ddd;
+        color: var(--secondary-color);
         text-align: center;
         margin-bottom: 20px;
       }
       .gdpr-p{
         margin-bottom: 10px;
         text-align: center;
-        color: #ddd;
+        color: var(--third-color);
 
       }
       .gdpr-ul{
@@ -466,7 +514,7 @@ h1,h2,h3,p{
       .gdpr-li{
         padding: 10px;
         margin-bottom: 10px;
-        color: #bbb;
+        color: var(--fourth-color);
         text-align: center;
       }
 
@@ -478,6 +526,7 @@ h1,h2,h3,p{
   .cookie-banner h1 {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
   }
   
   .cookie-banner p {
@@ -533,11 +582,10 @@ h1,h2,h3,p{
     height: 35%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #222;
+    background-color: var(--primary-bg-color);
     color: white;
     padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -595,6 +643,9 @@ h1,h2,h3,p{
   .cookie-left{
     padding-right: 0;
   }
+  .cookie-banner p{
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -619,6 +670,9 @@ h1,h2,h3,p{
   }
   .cookie-left{
     padding-right: 0;
+  }
+  .cookie-banner p{
+    text-align: center;
   }
 }
 
@@ -710,7 +764,7 @@ h1,h2,h3,p{
     /*---------->   HOME  BEGIN / AUTHORS BEGIN <----------*/
 
     .card-container{
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         margin: var(--margin-1);
         margin: 0  30px;
     }
@@ -722,24 +776,23 @@ h1,h2,h3,p{
         color: var(--primary-color);
         text-align: center;
         font-weight: bold;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
       }
-      
       .card-container p{
         font-size: 1.2rem;
-        text-align: center;
+        text-align: justify;
         line-height: 1.5;
         color: var(--primary-color);
         margin-bottom: 30px;
         padding: 15px;
-        background-color: #222;  }
+        background-color: var(--primary-bg-color);  }
       
       .card-list {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         margin-bottom: 20px;
       }
 
@@ -751,10 +804,10 @@ h1,h2,h3,p{
         max-width: 50%;
         margin: 90px auto;
         padding: 20px;
-        border: 1px solid var(--primary-color);
-        box-shadow: 5px 5px 15px rgba(255, 255, 255, .7); /* Fehér árnyék */
+        border: 1.5px solid var(--primary-color);
+        box-shadow: 5px 5px 15px var(--shadow-color); 
         border-radius: 17px;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         align-items: center;
         align-content: center;
     }
@@ -772,7 +825,7 @@ h1,h2,h3,p{
         width: 100%;
         padding: 15px;
         margin-bottom: 10px;
-        background-color: #444;
+        background-color: var(--secondary-bg-color);
         color: var(--primary-color);
         border: none;
         border-radius: 19px;
@@ -787,12 +840,13 @@ h1,h2,h3,p{
       padding-top: 20px;
       margin-bottom: 0;
       cursor: pointer;
-      color:#f4e696; 
+      color:var(--link-bf-color); 
+      text-align: center;
     }
     .login_p:hover{
       padding-top: 20px;
       cursor: pointer;
-      color:#FFD700;
+      color:var(--link-color);
     }
     
     
@@ -818,7 +872,7 @@ h1,h2,h3,p{
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #222;
+        background: var(--primary-bg-color);
       }
       
       button.hidden {
@@ -839,7 +893,7 @@ h1,h2,h3,p{
       .logout{
         margin: 30px;
         padding: 10px 20px;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         border: var(--primary-color) 1px solid;
       }
       .button-logout{
@@ -874,7 +928,7 @@ h1,h2,h3,p{
       padding-bottom: 35px;
       border: 1px solid var(--primary-color);
       border-radius: 17px;
-      background-color: #222;
+      background-color: var(--primary-bg-color);
       align-items: center;
       align-content: center;
       overflow: hidden;
@@ -966,9 +1020,9 @@ h1,h2,h3,p{
         margin: 0 auto;
         padding: 35px 15px;
         border: 1px solid #ddd;
-        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
+        box-shadow: 5px 5px 10px var(--shadow-color);
         border-radius: 17px;
-        background-color: #222;
+        background-color: var(--primary-bg-color);
         align-items: center;
         align-content: center;
     }
@@ -986,7 +1040,7 @@ h1,h2,h3,p{
     .register {
         width: 100%;
         padding: 15px;
-        background-color: #444;
+        background-color: var(--secondary-bg-color);
         color: var(--primary-color);
         border: none;
         border-radius: 19px;
