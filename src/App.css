@@ -297,10 +297,8 @@ h1,h2,h3,p{
         box-shadow: 0 5px 15px -8px var(--shadow-color);
         margin-bottom: 70px;
     }
-    
-    .nav-logo h3 {
-        color: var(--primary-color);
-
+    .nav-logo .logo{
+      width:100px
     }
     
     /* Nav menu for larger screens */
@@ -382,6 +380,9 @@ h1,h2,h3,p{
     
         .nav-toggle-button {
         display: block; /* show toggle button on small screens */
+        }
+        .nav-logo .logo{ 
+          /*display: none;*/
         }
     }
 
