@@ -55,8 +55,8 @@ const GDPR = () => {
       <p className="gdpr-p">A személyes adatokat megfelelő technikai és szervezési intézkedésekkel védjük a jogosulatlan hozzáférés és adatvesztés ellen.</p>
       
       <h2 className="gdpr-subtitle">9. Jogorvoslati lehetőségek</h2>
-      <p className="gdpr-p">Amennyiben a felhasználók adatkezeléssel kapcsolatos panaszaik lennének, az alábbi hatósághoz fordulhatnak:</p>
-      <p className="gdpr-p">Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)<br/>Cím: 1125 Budapest, Szilágyi Erzsébet fasor 22/C<br/>Weboldal: <a href="https://www.naih.hu">www.naih.hu</a></p>
+      <p className="gdpr-p">Amennyiben a felhasználóknak adatkezeléssel kapcsolatos panaszaik lennének, az alábbi hatósághoz fordulhatnak:</p>
+      <p className="gdpr-p">Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)<br/>Cím: 1125 Budapest, Szilágyi Erzsébet fasor 22/C<br/>Weboldal: <a className="gdpr-link" href="https://www.naih.hu">www.naih.hu</a></p>
     </div>
   );
 };

@@ -42,12 +42,10 @@ const Cookie = () => {
           <h1>Cookie figyelmeztetés</h1>
           <p>
             Ez a weboldal sütiket használ annak érdekében, hogy a legjobb felhasználói élményt
-            nyújtsa Önnek. A sütik kis szöveges fájlok, amelyeket a böngésző tárol, és segítenek
-            az oldal működésének optimalizálásában, a felhasználói preferenciák megjegyzésében,
-            valamint statisztikai elemzések készítésében.
+            nyújtsa Önnek.
           </p>
           <p>
-            Ön dönthet arról, hogy elfogadja-e a sütiket. Az elfogadásukkal hozzájárul az oldal
+            Az elfogadásukkal hozzájárul az oldal
             működéséhez szükséges és egyéb kényelmi funkciókhoz. Ha elutasítja őket, előfordulhat,
             hogy bizonyos funkciók nem működnek megfelelően.
           </p>

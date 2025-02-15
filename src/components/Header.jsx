@@ -43,13 +43,13 @@ export default function Header() {
       <div className="container nav-container">
         {showLogo && (
           <Link className="nav-logo" to={'/'}>
-            <img className='logo' src="../public/images/logo.png" alt="Főoldal" />
+            <img className='logo' src="../images/logo.png" alt="Főoldal" />
           </Link>
         )}
 
         {/* Menü nagyobb képernyőkre */}
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-          <li><ThemeToggle /></li>
+          <li ><ThemeToggle /></li>
           <li><Link to={'/myposts/1'}>Profilom</Link></li>
           <li><Link to={'/create'}>Poszt létrehozása</Link></li>
           <li><Link to={'/authors'}>Szerzők</Link></li>

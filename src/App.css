@@ -1,4 +1,3 @@
-
 /*---------->   BASIC SETTINGS BEGIN  <----------*/
 :root{
   --primary-bg-color:#222 !important;
@@ -8,7 +7,9 @@
   --third-color: #bbb !important;
   --link-color: #FFD700 !important;
   --link-bf-color:#f4e696 !important;
-  --link-btn:#fff !important;
+  --link-btn:#000 !important;
+  --btn-accept:#00851d !important;
+  --btn-decline:#c60000 !important;
   --shadow-color:rgba(255, 255, 255, 1) !important;
     /*--margin-1:70px 0;
     --width-1: 50%;
@@ -21,7 +22,8 @@
   --primary-color: #fff !important;
   --secondary-color: #ddd !important;
   --third-color: #ccc !important;
-  --fourth-color: #bbb !important;
+  --fourth-color: #fff !important;
+  --fifth-color: #fff !important;
   --link-color: #FFD700 !important;
   --link-bf-color:#f4e696 !important;
   --link-btn:#000 !important;
@@ -33,9 +35,10 @@
   --primary-color: #222 !important;
   --secondary-color: #333 !important;
   --third-color: #444 !important;
-  --fourth-color: #555 !important;
-  --link-color: #ff0015 !important;
-  --link-bf-color:#E63946 !important;
+  --fourth-color: #000 !important;
+  --fifth-color: #fff !important;
+  --link-color: #5400c9 !important;
+  --link-bf-color:#743ac6 !important;
   --link-btn:#fff !important;
   --shadow-color:rgba(0, 0, 0, 1) !important;
 }
@@ -56,16 +59,16 @@ h1,h2,h3,p{
 
 .input-form{
   width: 100%;
-  padding: 10px;
+  padding: .6rem;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: .25rem;
 }
 
 .label-form{
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: .5rem;
   color:  var(--primary-color);
   font-weight: bold;
 }
@@ -143,9 +146,9 @@ h1,h2,h3,p{
     /*---------->   CARD  BEGIN <----------*/
 
     .card {
-        min-width: 20rem;
+        min-width: 15rem;
         max-width: 25rem;
-        max-height: 38rem;
+        max-height: 33rem;
         margin: 70px 1.5rem;
         border: 1px solid var(--primary-color);
         background-color: var(--primary-bg-color);
@@ -168,8 +171,8 @@ h1,h2,h3,p{
       }
       
       .card-content {
-        padding: 1.1rem !important;
-        margin: 0;
+        padding: .1rem !important;
+        margin: 0 !important;
         text-align: center;
       }
       
@@ -180,7 +183,7 @@ h1,h2,h3,p{
       
       .card-text {
         font-size: 1rem !important;
-        margin: 0;
+        margin: 0 !important;
         flex-grow: 1;
         text-align:center !important;
       }
@@ -188,7 +191,7 @@ h1,h2,h3,p{
       .card-date {
         font-size: .9rem !important;
         text-align: center !important;
-        margin: 0 0 10px 0; 
+        margin: 0 !important;
       }
 
       /*.btn-card-show-more{
@@ -281,6 +284,12 @@ h1,h2,h3,p{
     .theme-toggle-btn{
       color: var(--primary-color);
       cursor: pointer;
+      font-size: 1.2rem;
+      align-items: center;
+      margin: 0;
+    }
+    .theme-toggle-btn:hover{
+      color: var(--link-color);
     }
 
     /*---------->   THEMETOGGLE  END <----------*/
@@ -335,6 +344,7 @@ h1,h2,h3,p{
     
     .nav-menu li a:hover {
       color: var(--link-color); /* A szöveg színe változik */
+      font-size: 1.1rem;
       transition-delay: 0s; /* A színváltás késleltetése visszaáll, amikor hover történik */
     }
     
@@ -380,9 +390,6 @@ h1,h2,h3,p{
     
         .nav-toggle-button {
         display: block; /* show toggle button on small screens */
-        }
-        .nav-logo .logo{ 
-          /*display: none;*/
         }
     }
 
@@ -469,6 +476,34 @@ h1,h2,h3,p{
 
     /*---------->   TEXTEDITOR  BEGIN <----------*/
 
+    /* Módosítjuk a Quill toolbar stílusait */
+.ql-toolbar {
+  background-color: var(--primary-bg-color) !important; /* Sötétszürke háttérszín */
+  color: var(--primary-color) !important; /* Fehér szín a szövegeknek */
+}
+
+/* A toolbar gombjainak színe */
+.ql-toolbar .ql-formats button {
+  background-color: transparent; /* Átlátszó háttér a gomboknak */
+  color: var(--primary-color) !important; /* Fehér színű ikonok és szövegek */
+  border: none; /* Nincs keret */
+}
+
+/* Ha szeretnél egyedi stílust a dropdown-okhoz is */
+.ql-toolbar .ql-picker {
+  color: var(--primary-color) !important; /* Fehér szín a legördülő menük szövegeinek */
+}
+
+.ql-toolbar .ql-picker-item {
+  background-color: transparent; /* Átlátszó háttér */
+  color: var(--primary-color) !important; /* Fehér szín */
+}
+
+.ql-toolbar .ql-picker-item:hover {
+  background-color: var(--secondary-bg-color); /* Sötétebb háttér a legördülő menü elemeinek hover során */
+}
+
+
       .save-button{
         width: 60%;
         margin-left: 20%;
@@ -493,30 +528,41 @@ h1,h2,h3,p{
       .gdpr-title{
         margin-top: 30px;
         margin-bottom: 30px;
-        text-align: center;
+        text-align: justify;
         color: var(--primary-color);
 
       }
       .gdpr-subtitle{
         color: var(--secondary-color);
-        text-align: center;
+        text-align: justify;
         margin-bottom: 20px;
       }
       .gdpr-p{
-        margin-bottom: 10px;
-        text-align: center;
+        margin-bottom: .75rem;
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+        text-align: justify;
         color: var(--third-color);
 
       }
       .gdpr-ul{
-        margin: 0 auto;
-        list-style:none;
+       margin: 0;
+       margin-left: 6rem;
+        list-style:square;
       }
       .gdpr-li{
         padding: 10px;
         margin-bottom: 10px;
-        color: var(--fourth-color);
-        text-align: center;
+        color: var(--third-color);
+        text-align: justify;
+      }
+
+      .gdpr-link{
+        text-decoration: none;
+        color: var(--link-bf-color);
+      }
+      .gdpr-link:hover{
+        color: var(--link-color);
       }
 
   /*---------->   GDPR  END <----------*/
@@ -543,26 +589,32 @@ h1,h2,h3,p{
   
   .cookie-button {
     padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     border: none;
     color: white;
     cursor: pointer;
   }
   
   .cookie-accept {
-    background-color: #10b981;
+    border: 1px solid var(--btn-accept);
+    background-color: var(--primary-bg-color);
+    color: var(--fourth-color);
   }
   
   .cookie-accept:hover {
-    background-color: #059669;
+    color: var(--fifth-color);
+    background-color: var(--btn-accept);
   }
   
   .cookie-decline {
-    background-color: #ef4444;
+    color: var(--fourth-color);
+    border: 1px solid var(--btn-decline);
+    background-color: var(--primary-bg-color);
   }
   
   .cookie-decline:hover {
-    background-color: #dc2626;
+    color: var(--fifth-color);
+    background-color: var(--btn-decline);
   }
 
   .cookie-overlay {
@@ -656,7 +708,7 @@ h1,h2,h3,p{
     width: 90%;
     justify-content: space-around;
     flex-direction: column;
-    height: 65%;
+    height: 75%;
   }
 
   .cookie-banner p{
