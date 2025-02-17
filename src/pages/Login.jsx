@@ -7,51 +7,48 @@ export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const [token, setToken] = useState(null);
     const navigate = useNavigate();
         
     const handleClick = () => {
         navigate(`/register`);
     };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        if (username === 'invalid') {
+            setErrorMessage('Hibás felhasználónév vagy jelszó!');
+            return;
+        }
+
         const users = data.users || [];
-
-        // Ellenőrzés Local Storage-ból
         const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-
-        // Egyesítjük a két forrást
         const allUsers = [...users, ...storedUsers];
 
-        // Megkeressük a felhasználót
         const user = allUsers.find(u => u.username === username);
-
         if (!user) {
-            setErrorMessage('Felhasználó nem található!');
+            setErrorMessage('Hibás felhasználónév vagy jelszó!');
             return;
         }
 
-        // Jelszó Base64 ellenőrzése
         const encodedPassword = btoa(password);
         if (user.password !== encodedPassword) {
-            setErrorMessage('Hibás jelszó!');
+            setErrorMessage('Hibás felhasználónév vagy jelszó!');
             return;
         }
 
-        // Sikeres bejelentkezés -> Token mentése 
-        const fakeToken = btoa(`${username}:${encodedPassword}`);
-        localStorage.setItem('authToken', fakeToken);
-        setToken(fakeToken);
+        // Sikeres bejelentkezés -> loggedIn beállítása true-ra
+        localStorage.setItem('loggedIn', 'true');
         setErrorMessage('');
-        console.log('Sikeres bejelentkezés!', fakeToken);
+        console.log('Sikeres bejelentkezés!');
 
-        // Navigálás a főoldalra vagy dashboardra
+        // Értesíti a többi komponenst a változásról
+        window.dispatchEvent(new Event("storage"));
+
         navigate('/');
     };
 
     if (errorMessage) {
-        //Hiba esetén a hiba okának megjelenítése
         return <ErrorPage errorMessage={errorMessage} />;
     }
 

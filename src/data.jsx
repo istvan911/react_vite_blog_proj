@@ -228,7 +228,7 @@ const users = [
   {
     "id": 1,
     "username": "johndoe",
-    "password": "cGFzc3dvcmQxMjM=",
+    "password": "cGFzc3dvcmQxMjM=", //password123
     "fullName": "John Doe",
     "dateOfBirth": "1990-05-15",
     "role": "USER",
@@ -238,7 +238,7 @@ const users = [
   {
     "id": 2,
     "username": "janedoe",
-    "password": "securePass1!",
+    "password": "c2VjdXJlUGFzczEh",//securePass1!
     "fullName": "Jane Doe",
     "dateOfBirth": "1985-09-20",
     "role": "ADMIN",

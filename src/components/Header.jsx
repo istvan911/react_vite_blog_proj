@@ -6,8 +6,21 @@ import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(
+    JSON.parse(localStorage.getItem("loggedIn")) || false
+  );
   const [showLogo, setShowLogo] = useState(true);
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
 
   // Menü megnyitása
   const toggleMenu = () => {
@@ -17,8 +30,10 @@ export default function Header() {
     }
   };
 
-  const toggleLogin = () => {
-    setLoggedIn(!loggedIn);
+  // Kijelentkezés funkció
+  const handleLogout = () => {
+    localStorage.setItem("loggedIn", JSON.stringify(false));
+    window.dispatchEvent(new Event("storage")); // Értesítés más komponenseknek
   };
 
   // 800 pixel alatt a logó megjelenítésének kezelése a menü állapotától függően
@@ -31,7 +46,7 @@ export default function Header() {
       }
     };
 
-    handleResize(); // Meghívás kezdeti állapot frissítéséhez
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -49,11 +64,15 @@ export default function Header() {
 
         {/* Menü nagyobb képernyőkre */}
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-          <li ><ThemeToggle /></li>
-          <li><Link to={'/myposts/1'}>Profilom</Link></li>
-          <li><Link to={'/create'}>Poszt létrehozása</Link></li>
+          <li><ThemeToggle /></li>
+          {loggedIn && <li><Link to={'/myposts/1'}>Profilom</Link></li>}
+          {loggedIn && <li><Link to={'/create'}>Poszt létrehozása</Link></li>}
           <li><Link to={'/authors'}>Szerzők</Link></li>
-          <li>{loggedIn ? <Link to={'/logout'}>Kijelentkezés</Link> : <Link to={'/login'}>Bejelentkezés</Link>}</li>
+          {loggedIn ? (
+            <li><Link to={'/'} onClick={handleLogout}>Kijelentkezés</Link></li>
+          ) : (
+            <li><Link to={'/login'}>Bejelentkezés</Link></li>
+          )}
         </ul>
 
         {/* Menü gomb mobil nézetben */}
