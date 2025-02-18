@@ -50,7 +50,8 @@ export default function Card({ id }) {
       <div className="card-content">
         <h3 className="card-title" alt={postTitle}>{truncateText(postTitle, 45)}</h3>
         <p className="card-text">{truncateText(postContent, 180)}</p>
-        <p className="card-date">{post.createdAt}</p>
+        {/*<p className="card-date">{post.createdAt}</p>*/}
+        <button className='btn-card-show-more'>Megtekint</button>
       </div>
     </div>
   );
