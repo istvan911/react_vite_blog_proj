@@ -12,10 +12,10 @@
   --btn-accept:#00851d !important;
   --btn-decline:#c60000 !important;
   --shadow-color:rgba(255, 255, 255, 1) !important;
-    /*--margin-1:4.375rem 0;
+    --margin-1:4.375rem 0;
     --width-1: 50%;
     --width-3: 90%;
-    --height-1:75vh*/
+    --height-1:75vh
 }
 [data-theme="dark"] {
   --primary-bg-color:#222 !important;
@@ -40,7 +40,7 @@
   --fourth-color: #000 !important;
   --fifth-color: #fff !important;
   --link-color: #3f0098 !important;
-  --link-bf-color:#743ac6 !important;
+  --link-bf-color:#333 !important;
   --link-btn:#fff !important;
   --brightness-procent: 50% !important;
   --shadow-color:rgba(0, 0, 0, 1) !important;
@@ -93,7 +93,9 @@ h1,h2,h3,p{
 
 .container-50-bordered{
   max-width: 50%;
+
         margin: 0 auto;
+        margin-top: 150px;
         padding: 2.25rem 1rem;
         border: 1px solid var(--primary-color);
         box-shadow: .25rem .25rem .6rem var(--shadow-color);
@@ -114,7 +116,7 @@ h1,h2,h3,p{
         border: 1px solid var(--primary-color);
         border-radius: .5rem;
         padding: 1rem;
-        max-width: 14rem;
+        max-width: 19rem;
         text-align: center;
         margin: 2rem 0;
         transition: transform 0.2s;
@@ -176,13 +178,16 @@ h1,h2,h3,p{
     .card {
         min-width: 15rem;
         max-width: 25rem;
-        min-height: 31rem;
-        max-height: 35rem !important;
+        min-height: 35rem;
+        max-height: 38rem !important;
         margin: 4.375rem 1.5rem;
         border: 1px solid var(--primary-color);
         background-color: var(--primary-bg-color);
         border-radius: 1rem;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         transition: transform 0.2s;
       }
       
@@ -206,12 +211,14 @@ h1,h2,h3,p{
       }
       
       .card-title {
-        font-size: 1.4rem !important;
+        font-size: 1.3rem !important;
         margin: 0;
+        height: auto;
       }
       
       .card-text {
         font-size: 1rem !important;
+        height: auto;
         margin: 0 !important;
         flex-grow: 1;
         text-align:center !important;
@@ -231,12 +238,19 @@ h1,h2,h3,p{
         cursor: pointer;
         background-color: var(--primary-bg-color);
         font-weight: bold;
-        margin-bottom: .3rem;
+        margin: auto;
       }
       .btn-card-show-more:hover{
         background-color: var(--link-color);
         border-color: var(--link-color);
         color: var(--primary-bg-color);
+      }
+
+      .btn-space{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
       }
 
       /* Responsive styles */
@@ -260,7 +274,7 @@ h1,h2,h3,p{
 
       .card-content {
         padding: 1rem !important;
-        margin: 0 !important;
+        margin-top: .3rem !important;
         text-align: center;
       }
       
@@ -271,7 +285,7 @@ h1,h2,h3,p{
       
       .card-text {
         font-size: .8rem !important;
-        margin: 0 !important;
+        margin-bottom: .3rem !important;
         flex-grow: 1;
         text-align:center !important;
       }
@@ -279,7 +293,7 @@ h1,h2,h3,p{
       .card-date {
         font-size: .7rem !important;
         text-align: center !important;
-        margin: 0 !important;
+        margin-bottom: .3rem !important;
       }
 
     }
@@ -372,106 +386,116 @@ h1,h2,h3,p{
 
     /*---------->   HEADER  BEGIN <----------*/
 
-    /* Basic styling */
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        color: var(--primary-color);
-        box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color);
-        margin-bottom: 4.375rem;
-    }
-    .nav-logo .logo{
-      width:100px
-    }
-    
-    /* Nav menu for larger screens */
-    .nav-menu {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-    }
-    
-    .nav-menu li a {
-      color: var(--primary-color);
-      padding: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative; /* Szükséges a ::after pszeudoelemhez */
-      transition: color 0.3s ease-in-out; /* A szöveg színének átmenete */
-      transition-delay: 0.3s; /* Késleltetés a szín váltására */
-    }
-    
-    .nav-menu li a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: .25rem; /* A csík vastagsága */
-      background-color: var(--link-color); /* Aranysárga szín */
-      bottom: 0;
-      left: 0;
-      transition: width .5s ease-in-out; /* Animáció a csík szélességére */
-    }
-    
-    .nav-menu li a:hover::after {
-      width: 100%; /* A csík végighúzódik a link alatt */
-    }
-    
-    .nav-menu li a:hover {
-      color: var(--link-color); /* A szöveg színe változik */
-      font-size: 1.1rem; /* A méretváltozás egyértelművé tétele */
-      transition:  font-size 0.3s ease; /* Az összes változás egy helyen */
-      transition-delay: 0s; /* Azonnali hatás */
-    }
-    
-    
-    
-    /* Mobile menu (initially hidden) */
-    .nav-toggle-button {
-        background: none;
-        border: none;
-        color: var(--primary-color);
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: none; /* hidden by default on large screens */
-    }
-    .nav-toggle-button:hover{
-      color: var(--link-color);
-    }
-    
-    /* Mobile menu styling */
-    .nav-menu.open {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-        flex-direction: column;
-        box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color);
-    }
-    
-    .nav-menu li {
-        padding: 1rem 0;
-    }
-    
-    /* Responsive styles */
-    @media (max-width: 768px) {
-        .nav-menu {
-        display: none; /* hide on small screens */
-        flex-direction: column;
-        width: 100%;
-        z-index: 10;
-        }
-    
-        .nav-toggle-button {
-        display: block; /* show toggle button on small screens */
-        }
-    }
+/* Basic styling */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--primary-color);
+  box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color);
+  /* margin-bottom: 4.375rem;  Eltávolítva, hogy ne legyen alatta extra tér */
+  position: fixed; /* A menü fixálása a képernyő tetején */
+  top: 0; /* A tetején maradjon */
+  left: 0;
+  width: 100%; /* Teljes szélességet elfoglalja */
+  background: var(--primary-bg-color); /* Háttérszín hozzáadva a jobb láthatóságért */
+  z-index: 1000; /* Magas rétegindex, hogy mindig elöl legyen */
+}
 
-    /*---------->   HEADER  END <----------*/
+.nav-logo .logo{
+  width: 100px;
+}
+
+/* Nav menu for larger screens */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu li a {
+  color: var(--primary-color);
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: .25rem;
+  background-color: var(--link-color);
+  bottom: 0;
+  left: 0;
+  transition: width .5s ease-in-out;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+.nav-menu li a:hover {
+  color: var(--link-color);
+  font-size: 1.1rem;
+  transition: font-size 0.3s ease;
+  transition-delay: 0s;
+}
+
+/* Mobile menu (initially hidden) */
+.nav-toggle-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* hidden by default on large screens */
+}
+
+.nav-toggle-button:hover {
+  color: var(--link-color);
+}
+
+/* Mobile menu styling */
+.nav-menu.open {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 266.4px;
+  text-align: center;
+  padding: 1rem 0;
+  flex-direction: column;
+  box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color);
+  background: var(--primary-bg-color); /* Háttérszín biztosítása a láthatóság miatt */
+}
+
+.nav-menu li {
+  padding: 1rem 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      z-index: 10000;
+      height: 100%;
+  }
+
+  .nav-toggle-button {
+      display: block;
+  }
+}
+
+/*---------->   HEADER  END <----------*/
+
 
     /*---------->   FOOTER  BEGIN <----------*/
 
@@ -601,7 +625,7 @@ h1,h2,h3,p{
 
       .gdpr-container{
         max-width: 80%;
-        margin: 90px auto;
+        margin: 150px auto;
         padding: 20px;
         border: 1px solid var(--primary-color);
         box-shadow: 5px 5px 15px var(--shadow-color);
@@ -868,6 +892,7 @@ h1,h2,h3,p{
         padding: 1.25rem;
         text-align: center;
         margin: 90px auto;
+        margin-top: 150px;
         box-shadow: .25rem .25rem 1rem rgba(255, 0, 0, 1);
         border: 1px solid red;
         border-radius: 1rem;
@@ -905,6 +930,7 @@ h1,h2,h3,p{
         background-color: var(--primary-bg-color);
         margin: var(--margin-1);
         margin: 0  2rem;
+        margin-top: 150px !important;
     }
       
       .card-container h1 {
@@ -939,6 +965,7 @@ h1,h2,h3,p{
 
       .card-container{
         margin: 0!important;
+        margin-top: 150px !important  ;
         gap: 1rem;
       }
       .card-container h1{
@@ -972,6 +999,7 @@ h1,h2,h3,p{
     .login-container {
         max-width: 50%;
         margin: 90px auto;
+        margin-top: 150px;
         padding: 1.25rem;
         border: 1.5px solid var(--primary-color);
         box-shadow: .25rem .25rem 1rem var(--shadow-color); 
@@ -1094,6 +1122,7 @@ h1,h2,h3,p{
     .post-detail-container {
       max-width: 80%;
       margin: 0 auto;
+      margin-top: 150px;
       padding-bottom: 2.25rem;
       border: 1px solid var(--primary-color);
       border-radius: 1rem;
@@ -1197,6 +1226,7 @@ h1,h2,h3,p{
     .register-container {
         max-width: 50%;
         margin: 0 auto;
+        margin-top: 150px;
         padding: 2.25rem 1rem;
         border: 1px solid var(--primary-color);
         box-shadow: .25rem .25rem .6rem var(--shadow-color);
@@ -1253,6 +1283,7 @@ h1,h2,h3,p{
       align-items: center;
       padding: 1.25rem;
       margin: 0 auto;
+      margin-top: 150px;
     }
     
     .profile-header {
@@ -1289,6 +1320,44 @@ h1,h2,h3,p{
       color: var(--primary-color);
     }
     
+    @media (max-width: 768px) {
+      .profile-header {
+        
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      
+      .profile-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1.25rem;
+      }
+      
+      .profile-name {
+        font-size: 1.9rem;
+        font-family: 'Roboto Mono';
+        font-weight: bold;
+        margin-bottom: .6rem;
+      }
+      
+      .profile-join-date {
+        font-size: 1rem;
+        margin-bottom: .75rem;
+      }
+      .profile-bio{
+        font-size: .9rem;
+        text-align: justify;
+      }
+      
+      .no-posts {
+        font-size: 1.2rem;
+        text-align: center;
+        color: var(--primary-color);
+      }
+
+    }
 
     /*---------->   USERPROFILE  END <----------*/
 

@@ -49,10 +49,13 @@ export default function Card({ id }) {
       <img src={post.image} className="card-image" alt={postTitle} />
       <div className="card-content">
         <h3 className="card-title" alt={postTitle}>{truncateText(postTitle, 45)}</h3>
-        <p className="card-text">{truncateText(postContent, 180)}</p>
-        {/*<p className="card-date">{post.createdAt}</p>*/}
-        <button className='btn-card-show-more'>Megtekint</button>
+        <p className="card-text">{truncateText(postContent, 180)}</p>  
       </div>
+      <div className="btn-space">
+          {/*<p className="card-date">{post.createdAt}</p>*/}
+          {<button className='btn-card-show-more'>Megtekint</button>  }
+        </div>
+      
     </div>
   );
 }
