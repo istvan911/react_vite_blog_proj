@@ -39,7 +39,7 @@
   --third-color: #444 !important;
   --fourth-color: #000 !important;
   --fifth-color: #fff !important;
-  --link-color: #5400c9 !important;
+  --link-color: #3f0098 !important;
   --link-bf-color:#743ac6 !important;
   --link-btn:#fff !important;
   --brightness-procent: 50% !important;
@@ -114,7 +114,7 @@ h1,h2,h3,p{
         border: 1px solid var(--primary-color);
         border-radius: .5rem;
         padding: 1rem;
-        max-width: 19rem;
+        max-width: 14rem;
         text-align: center;
         margin: 2rem 0;
         transition: transform 0.2s;
@@ -142,6 +142,31 @@ h1,h2,h3,p{
         font-size: 1.1rem !important;
         margin: 0.5rem 0;
         text-align: center !important;
+      }
+
+      @media (max-width: 768px) {
+        .author-card {
+          padding: .4rem;
+          min-width: 80% !important;
+          max-width: 85% !important;
+          min-height: 40% !important;
+          max-height: 50% !important;
+          margin-bottom: .6rem !important;
+        }
+        
+        .authorcard-image {
+          width: 80px;
+          height: 80px;
+          margin-bottom: .5rem;
+        }
+        
+        .author-name {
+          font-size: 1.1rem;
+        }
+        
+        .author-bio {
+          font-size: .8rem !important;
+        }
       }
 
     /*---------->   AUTHORCARD  END <----------*/
@@ -521,6 +546,13 @@ h1,h2,h3,p{
         }
         .gdpr{
           margin-bottom: .3rem;
+        }
+
+        .footer-li{
+          font-size: 1rem;
+        }
+        .footer-container h1{
+          font-size: 1.3rem;
         }
       }
     /*---------->   FOOTER  END <----------*/
@@ -921,6 +953,13 @@ h1,h2,h3,p{
       .card-list{
         justify-content: space-evenly !important;
       }
+
+      .authors-h1{
+        font-size: 1.3rem;
+      }
+      .authors-p{
+        font-size: .8rem !important;
+      } 
 
     }
 
