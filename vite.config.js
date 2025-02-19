@@ -4,6 +4,7 @@
 
     export default defineConfig({
         plugins: [react()],
+        base: '/',
         define: {
             global: 'window' // vagy 'this' is, ha szükséges
         },

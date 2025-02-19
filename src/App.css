@@ -731,7 +731,7 @@ h1,h2,h3,p{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 999; /* Magasabb, mint bármi más az oldalon */
+    z-index: 10999; /* Magasabb, mint bármi más az oldalon */
     pointer-events: all; /* Minden interakciót megakadályoz */
   }
   
@@ -749,10 +749,10 @@ h1,h2,h3,p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 11000;
   }
   .cookie-left{
-    padding-right: 1.25te;
+    padding-right: 1.25rem;
   }
 
 @media (max-width: 1500px) {
