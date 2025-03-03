@@ -52,8 +52,10 @@ export default function Card({ id }) {
         <p className="card-text">{truncateText(postContent, 180)}</p>  
       </div>
       <div className="btn-space">
-          {/*<p className="card-date">{post.createdAt}</p>*/}
-          {<button className='btn-card-show-more'>Megtekint</button>  }
+          {//<p className="card-date">{post.createdAt}</p>
+          }
+          {<button className='btn-card-show-more'>Megtekint</button>  
+          }
         </div>
       
     </div>

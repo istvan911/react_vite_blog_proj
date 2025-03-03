@@ -66,7 +66,7 @@ export default function Header() {
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
           <li><ThemeToggle /></li>
           {loggedIn && <li><Link to={'/myposts/1'}>Profilom</Link></li>}
-          {loggedIn && <li><Link to={'/create'}>Poszt létrehozása</Link></li>}
+          {/*loggedIn && <li><Link to={'/create'}>Poszt létrehozása</Link></li>*/}
           <li><Link to={'/authors'}>Szerzők</Link></li>
           {loggedIn ? (
             <li><Link to={'/'} onClick={handleLogout}>Kijelentkezés</Link></li>

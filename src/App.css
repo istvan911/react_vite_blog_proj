@@ -191,11 +191,11 @@ h1,h2,h3,p{
         transition: transform 0.2s;
       }
       
-      .card:hover {
+      /*.card:hover {
         transform: scale(1.1);
         cursor:pointer;
-      }
-      
+      }*/
+
       .card-image {
         height: 16.5rem;
         width: 100%;
@@ -469,7 +469,7 @@ h1,h2,h3,p{
   text-align: center;
   padding: 1rem 0;
   flex-direction: column;
-  box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color);
+  box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color) !important;
   background: var(--primary-bg-color); /* Háttérszín biztosítása a láthatóság miatt */
 }
 
@@ -811,27 +811,28 @@ h1,h2,h3,p{
 @media (max-width: 768px) {
 
   .cookie-banner{
-    bottom: 1rem;
+    bottom: .1rem;
     width: 90%;
     justify-content: space-around;
     flex-direction: column;
-    height: 55%;
+    height: 65%;
   }
 
   .cookie-banner p{
-    font-size: .9rem;
+    font-size: .8rem;
   }
   .cookie-buttons{
     flex-direction: row;
     gap: 2rem;
   }
   .cookie-banner h1{
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .cookie-left{
     padding-right: 0;
   }
   .cookie-banner p{
+    font-size: .8rem;
     text-align: center;
   }
 }
