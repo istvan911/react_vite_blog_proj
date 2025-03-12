@@ -30,13 +30,21 @@ export default function Header() {
     }
   };
 
+  // Menü bezárása kattintás után mobil nézetben
+  const closeMenu = () => {
+    setMenuOpen(false);
+    if (window.innerWidth <= 800) {
+      setShowLogo(true);
+    }
+  };
+
   // Kijelentkezés funkció
   const handleLogout = () => {
     localStorage.setItem("loggedIn", JSON.stringify(false));
     window.dispatchEvent(new Event("storage")); // Értesítés más komponenseknek
+    closeMenu();
   };
 
-  // 800 pixel alatt a logó megjelenítésének kezelése a menü állapotától függően
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 800) {
@@ -64,14 +72,13 @@ export default function Header() {
 
         {/* Menü nagyobb képernyőkre */}
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-          <li><ThemeToggle /></li>
-          {loggedIn && <li><Link to={'/myposts/1'}>Profilom</Link></li>}
-          {/*loggedIn && <li><Link to={'/create'}>Poszt létrehozása</Link></li>*/}
-          <li><Link to={'/authors'}>Szerzők</Link></li>
+          <li onClick={closeMenu}><ThemeToggle /></li>
+          {loggedIn && <li><Link to={'/myposts/1'} onClick={closeMenu}>Profilom</Link></li>}
+          <li><Link to={'/authors'} onClick={closeMenu}>Szerzők</Link></li>
           {loggedIn ? (
             <li><Link to={'/'} onClick={handleLogout}>Kijelentkezés</Link></li>
           ) : (
-            <li><Link to={'/login'}>Bejelentkezés</Link></li>
+            <li><Link to={'/login'} onClick={closeMenu}>Bejelentkezés</Link></li>
           )}
         </ul>
 
@@ -83,3 +90,4 @@ export default function Header() {
     </nav>
   );
 }
+      

@@ -5,7 +5,7 @@ const posts =
         path: '/posts/post1.html',
         createdAt: "2023-09-10",
         userId: "1",
-        image: "/images/header1.jpg",
+        image: "/images/AI.webp",
         categoryId: 1,
     },
     {
@@ -13,7 +13,7 @@ const posts =
         path: '/posts/post2.html',
         createdAt: "2023-09-10",
         userId: "2",
-        image: "/images/header1.jpg",
+        image: "/images/headersec.jpg",
         categoryId: 2,
     },
     {
@@ -21,7 +21,7 @@ const posts =
         path: '/posts/post3.html',
         createdAt: "2023-09-10",
         userId: "3",
-        image: "/images/header1.jpg",
+        image: "/images/header3.jpg.webp",
         categoryId: 3,
       },
       {
@@ -29,7 +29,7 @@ const posts =
         path: '/posts/post4.html',
         createdAt: "2023-09-10",
         userId: "4",
-        image: "/images/header1.jpg",
+        image: "/images/header4.jpg",
         categoryId: 4,
       },
       {
@@ -37,7 +37,7 @@ const posts =
         path: '/posts/post5.html',
         createdAt: "2023-09-10",
         userId: "5",
-        image: "/images/header1.jpg",
+        image: "/images/header5.png",
         categoryId: 5,
       },
       {
@@ -45,7 +45,7 @@ const posts =
         path: '/posts/post6.html',
         createdAt: "2023-09-10",
         userId: "1",
-        image: "/images/header1.jpg",
+        image: "/images/header6.jpg",
         categoryId: 6,
       },
       {
@@ -53,7 +53,7 @@ const posts =
         path: '/posts/post7.html',
         createdAt: "2023-09-10",
         userId: "2",
-        image: "/images/header1.jpg",
+        image: "/images/header7.png",
         categoryId: 7,
       },
       {
@@ -61,7 +61,7 @@ const posts =
         path: '/posts/post8.html',
         createdAt: "2023-09-10",
         userId: "3",
-        image: "/images/header1.jpg",
+        image: "/images/header8.jpg",
         categoryId: 8,
       },
       {
@@ -69,7 +69,7 @@ const posts =
         path: '/posts/post9.html',
         createdAt: "2023-09-10",
         userId: "4",
-        image: "/images/header1.jpg",
+        image: "/images/header9.jpg",
         categoryId: 9,
       },
       {
@@ -85,7 +85,7 @@ const posts =
         path: '/posts/post11.html',
         createdAt: "2023-09-10",
         userId: "1",
-        image: "/images/header1.jpg",
+        image: "/images/header10.jpg",
         categoryId: 1,
       },
       {
@@ -93,7 +93,7 @@ const posts =
         path: '/posts/post12.html',
         createdAt: "2023-09-10",
         userId: "2",
-        image: "/images/header1.jpg",
+        image: "/images/header12.jpg",
         categoryId: 2,
       },
       {
@@ -101,7 +101,7 @@ const posts =
         path: '/posts/post13.html',
         createdAt: "2023-09-10",
         userId: "3",
-        image: "/images/header1.jpg",
+        image: "/images/header13.jpeg",
         categoryId: 3,
       },
       {
@@ -109,7 +109,7 @@ const posts =
         path: '/posts/post14.html',
         createdAt: "2023-09-10",
         userId: "4",
-        image: "/images/header1.jpg",
+        image: "/images/header14.jpg",
         categoryId: 4,
       },
       {
@@ -117,7 +117,7 @@ const posts =
         path: '/posts/post15.html',
         createdAt: "2023-09-10",
         userId: "5",
-        image: "/images/header1.jpg",
+        image: "/images/header15.jpeg",
         categoryId: 5,
       },
       {
@@ -125,7 +125,7 @@ const posts =
         path: '/posts/post16.html',
         createdAt: "2023-09-10",
         userId: "1",
-        image: "/images/header1.jpg",
+        image: "/images/header16.jpeg",
         categoryId: 6,
       },
       {
@@ -133,7 +133,7 @@ const posts =
         path: '/posts/post17.html',
         createdAt: "2023-09-10",
         userId: "2",
-        image: "/images/header1.jpg",
+        image: "/images/header17.jpg",
         categoryId: 7,
       },
       {
@@ -141,7 +141,7 @@ const posts =
         path: '/posts/post18.html',
         createdAt: "2023-09-10",
         userId: "3",
-        image: "/images/header1.jpg",
+        image: "/images/header18.jpg",
         categoryId: 8,
       },
       {
@@ -149,7 +149,7 @@ const posts =
         path: '/posts/post19.html',
         createdAt: "2023-09-10",
         userId: "1",
-        image: "/images/header1.jpg",
+        image: "/images/header19.jpg",
         categoryId: 9,
       },
       {
@@ -157,7 +157,7 @@ const posts =
         path: '/posts/post20.html',
         createdAt: "2023-09-10",
         userId: "1",
-        image: "/images/header1.jpg",
+        image: "/images/header20.jpg",
         categoryId: 10,
       }
 ]

@@ -28,7 +28,6 @@
   --link-color: #FFD700 !important;
   --link-bf-color:#f4e696 !important;
   --link-btn:#000 !important;
-  --brightness-procent: 100% !important;
   --shadow-color:rgba(255, 255, 255, 1) !important;
 }
 [data-theme="light"] {
@@ -42,7 +41,6 @@
   --link-color: #3f0098 !important;
   --link-bf-color:#333 !important;
   --link-btn:#fff !important;
-  --brightness-procent: 50% !important;
   --shadow-color:rgba(0, 0, 0, 1) !important;
 }
 
@@ -179,7 +177,7 @@ h1,h2,h3,p{
         min-width: 15rem;
         max-width: 25rem;
         min-height: 35rem;
-        max-height: 38rem !important;
+        max-height: 38rem;
         margin: 4.375rem 1.5rem;
         border: 1px solid var(--primary-color);
         background-color: var(--primary-bg-color);
@@ -191,10 +189,10 @@ h1,h2,h3,p{
         transition: transform 0.2s;
       }
       
-      /*.card:hover {
+      .card:hover {
         transform: scale(1.1);
         cursor:pointer;
-      }*/
+      }
 
       .card-image {
         height: 16.5rem;
@@ -239,6 +237,7 @@ h1,h2,h3,p{
         background-color: var(--primary-bg-color);
         font-weight: bold;
         margin: auto;
+        margin-bottom: 1rem;
       }
       .btn-card-show-more:hover{
         background-color: var(--link-color);
@@ -259,13 +258,13 @@ h1,h2,h3,p{
       .card{
         min-width: 80% !important;
         max-width: 90% !important;
-        min-height: 40% !important;
-        max-height: 50% !important;
+        min-height: 70% !important;
+        max-height: 80% !important;
         margin-bottom: .6rem !important;
       }
 
       .card-image {
-        height: 9rem;
+        height: 80%;
         width: 100%;
         margin: 0;
         object-fit: cover;
@@ -400,7 +399,7 @@ h1,h2,h3,p{
   left: 0;
   width: 100%; /* Teljes szélességet elfoglalja */
   background: var(--primary-bg-color); /* Háttérszín hozzáadva a jobb láthatóságért */
-  z-index: 1000; /* Magas rétegindex, hogy mindig elöl legyen */
+  z-index: 1000; /* Magas rétegindex, hogy mindig elöl legyen */  
 }
 
 .nav-logo .logo{
@@ -485,6 +484,9 @@ h1,h2,h3,p{
       width: 100%;
       z-index: 10000;
       height: 100%;
+  }
+  .nav-logo .logo{
+    width: 4rem;
   }
 
   .nav-toggle-button {
@@ -704,7 +706,8 @@ h1,h2,h3,p{
   
   .cookie-accept {
     border: 1px solid var(--btn-accept);
-    background-color: var(--primary-bg-color);
+    background-color: var(--btn-accept);
+   /* background-color: var(--primary-bg-color);*/
     color: var(--fourth-color);
   }
   
@@ -716,7 +719,7 @@ h1,h2,h3,p{
   .cookie-decline {
     color: var(--fourth-color);
     border: 1px solid var(--btn-decline);
-    background-color: var(--primary-bg-color);
+    background-color: var(--btn-decline);
   }
   
   .cookie-decline:hover {
@@ -787,7 +790,7 @@ h1,h2,h3,p{
     width: 60%;
     justify-content: space-around;
     flex-direction: column;
-    height: 45%;
+    height: 80% !important;
   }
 
   .cookie-banner p{
@@ -795,7 +798,7 @@ h1,h2,h3,p{
   }
   .cookie-buttons{
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .cookie-banner h1{
     font-size: 1.35rem;
@@ -822,7 +825,7 @@ h1,h2,h3,p{
     font-size: .8rem;
   }
   .cookie-buttons{
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
   }
   .cookie-banner h1{

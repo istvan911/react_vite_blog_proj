@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord,FaGithub} from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,9 +34,11 @@ export default function Footer() {
             </a>
           </li>
           <li className='footer-li'>
-            <a 
-            target='blank' 
-            href="https://github.com/">Egyéb</a>
+          <a 
+            target='blank'
+            href="https://discord.com/">
+            <FaGithub /> Github
+            </a>
           </li>
         </ul>
         <div className="copyright-text">

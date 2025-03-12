@@ -25,6 +25,14 @@ const AuthorCard = ({ id, profileImage, name, bio}) => {
       <img src={profileImage} alt={`${name}'s profile`} className="authorcard-image" />
       <h2 className="author-name">{name}</h2>
       <p className="author-bio">{truncateBio(bio)}</p>
+      {/*
+      <div className="btn-space">
+          {//<p className="card-date">{post.createdAt}</p>
+          }
+          {<button className='btn-card-show-more'>Megtekint</button>  
+          }
+        </div>
+      */}
     </div>
   );
 };
