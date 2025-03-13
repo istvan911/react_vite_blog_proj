@@ -64,8 +64,8 @@ export default function Header() {
   return (
     <nav>
       <div className="container nav-container">
-        {showLogo && (
-          <Link className="nav-logo" to={'/'}>
+        {/*showLogo &&*/ (
+          <Link onClick={closeMenu} className="nav-logo" to={'/'}>
             <img className='logo' src="../images/logo.png" alt="Főoldal" />
           </Link>
         )}
