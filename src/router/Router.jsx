@@ -30,22 +30,22 @@ export default function Router() {
         <Cookie />
         <Header/>
             <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/authors' element={<Authors />}/>
-            <Route path='/post/user/:id' element={<AuthorPost />}/>
-            <Route path='/posts/categories/:category' element={<CategoryPosts />}/>
-            <Route path='/create' element={<CreatePost />}/>
-            <Route path='/myposts/:id' element={<Dashboard />}/>
+            <Route path={`${import.meta.env.BASE_URL}`} element={<Home />}/>
+            <Route path={`${import.meta.env.BASE_URL}authors`} element={<Authors />}/>
+            <Route path={`${import.meta.env.BASE_URL}post/user/:id`} element={<AuthorPost />}/>
+            <Route path={`${import.meta.env.BASE_URL}posts/categories/:category`} element={<CategoryPosts />}/>
+            <Route path={`${import.meta.env.BASE_URL}create`} element={<CreatePost />}/>
+            <Route path={`${import.meta.env.BASE_URL}myposts/:id`} element={<Dashboard />}/>
             {/*<Route path='/' element={<DeletePost />}/>*/}
-            <Route path='/post/:id/edit' element={<EditPost />}/>
-            <Route path='/login' element={<Login />}/>
-            <Route path='/logout' element={<Logout />}/>
-            <Route path='/posts/:id' element={<PostDetail />}/>
-            <Route path='/register' element={<Register />}/>
-            <Route path='/profile/:id' element={<UserProfile />}/>
-            <Route path='/aszf' element={<ASZF />}/>
-            <Route path='/gdpr' element={<GDPR />}/>
-            <Route path='/*' element={<ErrorPage />}/>
+            <Route path={`${import.meta.env.BASE_URL}post/:id/edit`} element={<EditPost />}/>
+            <Route path={`${import.meta.env.BASE_URL}login`} element={<Login />}/>
+            <Route path={`${import.meta.env.BASE_URL}logout`} element={<Logout />}/>
+            <Route path={`${import.meta.env.BASE_URL}posts/:id`} element={<PostDetail />}/>
+            <Route path={`${import.meta.env.BASE_URL}register`} element={<Register />}/>
+            <Route path={`${import.meta.env.BASE_URL}profile/:id`} element={<UserProfile />}/>
+            <Route path={`${import.meta.env.BASE_URL}aszf`} element={<ASZF />}/>
+            <Route path={`${import.meta.env.BASE_URL}gdpr`} element={<GDPR />}/>
+            <Route path={`${import.meta.env.BASE_URL}*`} element={<ErrorPage errorMessage={'Hibás URL! Használd a menüt a navigáláshoz!'} />}/>
             </Routes>
         <Footer/>
     </BrowserRouter>

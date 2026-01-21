@@ -4,7 +4,7 @@
 
     export default defineConfig({
         plugins: [react()],
-        base: '/',
+        base: '/react_vite_blog_proj/',
         define: {
             global: 'window' // vagy 'this' is, ha szükséges
         },

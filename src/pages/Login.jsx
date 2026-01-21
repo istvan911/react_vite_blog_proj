@@ -10,7 +10,7 @@ export default function Login() {
     const navigate = useNavigate();
         
     const handleClick = () => {
-        navigate(`/register`);
+        navigate(`${import.meta.env.BASE_URL}/register`);
     };
 
     const handleSubmit = (e) => {
@@ -45,7 +45,7 @@ export default function Login() {
         // Értesíti a többi komponenst a változásról
         window.dispatchEvent(new Event("storage"));
 
-        navigate('/');
+        navigate(`${import.meta.env.BASE_URL}/`);
     };
 
     if (errorMessage) {

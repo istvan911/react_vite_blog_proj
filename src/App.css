@@ -458,10 +458,6 @@ h1,h2,h3,p{
   color: var(--link-color);
 }
 
-.nav-container{
-  box-shadow: none !important;
-}
-
 /* Mobile menu styling */
 .nav-menu.open {
   display: block;
@@ -472,7 +468,7 @@ h1,h2,h3,p{
   text-align: center;
   padding: 1rem 0;
   flex-direction: column;
-  box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color) !important;
+  box-shadow: 0 .3rem 1rem -.5rem var(--shadow-color);
   background: var(--primary-bg-color); /* Háttérszín biztosítása a láthatóság miatt */
   border-bottom: solid 1px white;
 }
@@ -711,8 +707,8 @@ h1,h2,h3,p{
   
   .cookie-accept {
     border: 1px solid var(--btn-accept);
-    background-color: var(--btn-accept);
-   /* background-color: var(--primary-bg-color);*/
+    /*background-color: var(--btn-accept);*/
+    background-color: var(--primary-bg-color);
     color: var(--fourth-color);
   }
   
@@ -724,7 +720,7 @@ h1,h2,h3,p{
   .cookie-decline {
     color: var(--fourth-color);
     border: 1px solid var(--btn-decline);
-    background-color: var(--btn-decline);
+    background-color: var(--primary-bg-color);
   }
   
   .cookie-decline:hover {
@@ -892,7 +888,7 @@ h1,h2,h3,p{
     .error-container {
         display: flex;
         max-width: 50%;
-        max-height: 50vh;
+        min-height: 50vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;

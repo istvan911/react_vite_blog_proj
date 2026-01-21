@@ -8,12 +8,12 @@ export default function Logout() {
   const handleLogout = () => {
     console.log('Felhasználó kijelentkezett');
     setIsOpen(false);
-    navigate(`/`);
+    navigate(`${import.meta.env.BASE_URL}/`);
   };
 
   const handleCancel = () => {
     setIsOpen(false);
-    navigate(`/`);
+    navigate(`${import.meta.env.BASE_URL}/`);
   };
 
   return (

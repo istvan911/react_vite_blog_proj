@@ -65,7 +65,7 @@ export default function Header() {
     <nav>
       <div className="container nav-container">
         {/*showLogo &&*/ (
-          <Link onClick={closeMenu} className="nav-logo" to={`${import.meta.env.BASE_URL}`}>
+          <Link onClick={closeMenu} className="nav-logo" to={'/react_vite_blog_proj/'}>
             <img className='logo' src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Főoldal" />
           </Link>
         )}
@@ -73,12 +73,12 @@ export default function Header() {
         {/* Menü nagyobb képernyőkre */}
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
           {<li onClick={closeMenu}><ThemeToggle /></li>}
-          {loggedIn && <li><Link to={`${import.meta.env.BASE_URL}myposts/1`} onClick={closeMenu}>Profilom</Link></li>}
-          <li><Link to={`${import.meta.env.BASE_URL}authors`} onClick={closeMenu}>Szerzők</Link></li>
+          {loggedIn && <li><Link to={`${import.meta.env.BASE_URL}/myposts/1`} onClick={closeMenu}>Profilom</Link></li>}
+          <li><Link to={`${import.meta.env.BASE_URL}/authors`} onClick={closeMenu}>Szerzők</Link></li>
           {loggedIn ? (
-            <li><Link to={`${import.meta.env.BASE_URL}`} onClick={handleLogout}>Kijelentkezés</Link></li>
+            <li><Link to={'/'} onClick={handleLogout}>Kijelentkezés</Link></li>
           ) : (
-            <li><Link to={`${import.meta.env.BASE_URL}login`} onClick={closeMenu}>Bejelentkezés</Link></li>
+            <li><Link to={`${import.meta.env.BASE_URL}/login`} onClick={closeMenu}>Bejelentkezés</Link></li>
           )}
         </ul>
 

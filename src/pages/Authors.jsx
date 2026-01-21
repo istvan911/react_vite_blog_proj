@@ -20,9 +20,9 @@ const Authors = () => {
       </p>
       <div className="card-list">
         {authors.map(author => (
-          <AuthorCard
+          <AuthorCard // Szerzők megjelenítése
             key={author.id}
-            id={author.id} // Passing the author's id
+            id={author.id} 
             profileImage={author.profilePicture}
             name={author.username}
             bio={author.bio}

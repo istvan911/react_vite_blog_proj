@@ -14,7 +14,7 @@ export default function Register() {
         
           const handleClick = () => {
             // Navigate to the /profile/:id page on click
-            navigate(`/login`);
+            navigate(`${import.meta.env.BASE_URL}/login`);
           };
 
     const handleSubmit = (e) => {
@@ -32,12 +32,12 @@ export default function Register() {
                     <input className='input-form'
                         id="username" 
                         value={userName} 
-                        placeholder='Add meg a felhasználóneved'
+                        placeholder='Felhasználónév'
                         onChange={(e) => setUserName(e.target.value)} 
                         required 
                     />
                 </div>
-                <div className="form-group">
+                {/*<div className="form-group">
                     <label className='label-form' htmlFor="fullName">Teljes név:</label>
                     <input className='input-form' 
                         id="fullName" 
@@ -46,9 +46,9 @@ export default function Register() {
                         onChange={(e) => setFullName(e.target.value)} 
                         required 
                     />
-                </div>
+                </div>*/}
                 <div className="form-group">
-                    <label className='label-form' htmlFor="dateOfBirth">Születési idő:</label>
+                    <label className='label-form' htmlFor="dateOfBirth">Születési dátum:</label>
                     <input className='input-form'
                         type="datetime-local" 
                         id="dateOfBirth" 
@@ -63,29 +63,29 @@ export default function Register() {
                         type="email" 
                         id="email" 
                         value={email} 
-                        placeholder='Add meg az email címed'
+                        placeholder='Email'
                         onChange={(e) => setEmail(e.target.value)} 
                         required 
                     />
                 </div>
-                <div className="form-group">
+                {<div className="form-group">
                     <label className='label-form' htmlFor="email">Telefonszám:</label>
                     <input className='input-form'
                         type="tel" 
                         id="phone" 
                         value={phone} 
-                        placeholder='Add meg a telefonszámod'
+                        placeholder='Telefonszám'
                         onChange={(e) => setPhone(e.target.value)} 
                         required 
                     />
-                </div>
+                </div>}
                 <div className="form-group">
                     <label className='label-form' htmlFor="password" autoComplete="new-password">Jelszó:</label>
                     <input className='input-form'
                         type="password" 
                         id="password" 
                         value={password} 
-                        placeholder='Add meg a jelszavad'
+                        placeholder='Jelszó'
                         onChange={(e) => setPassword(e.target.value)} 
                         required 
                     />
@@ -96,7 +96,7 @@ export default function Register() {
                         type="password" 
                         id="repassword" 
                         value={repassword} 
-                        placeholder='Add meg a jelszavad újra'
+                        placeholder='Jelszó újra'
                         onChange={(e) => setRePassword(e.target.value)} 
                         required 
                     />
